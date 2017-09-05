@@ -1,0 +1,12 @@
+title: Site Social Links
+context:
+  socialLinks:
+    -
+      svgHref: /images/icons.svg#icon_twitter
+      title: Twitter
+    -
+      svgHref: /images/icons.svg#icon_facebook
+      title: Facebook
+    -
+      svgHref: /images/icons.svg#icon_rss
+      title: Subscribe

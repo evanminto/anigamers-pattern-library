@@ -1,0 +1,9 @@
+title: Site Logo
+context:
+  src: /images/logo.png
+  tagName: div
+variants:
+  -
+    name: heading
+    context:
+      tagName: h1

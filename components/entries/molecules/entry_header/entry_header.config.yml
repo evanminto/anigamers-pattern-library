@@ -1,0 +1,10 @@
+title: Entry Header
+context:
+  title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+  subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+variants:
+  -
+    name: Simple
+    context:
+      subtitle: ''
+      simple: true

@@ -1,0 +1,4 @@
+title: Strong
+context:
+  strong: 'Important:'
+  after_strong: This is a mesage you should pay attention to.

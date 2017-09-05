@@ -1,0 +1,13 @@
+<header class="entry-header">
+  <h1>
+    <a href="">{{title}}</a>
+  </h1>
+
+  {{#if subtitle}}<p>{{subtitle}}</p>{{/if}}
+
+  {{#unless simple}}
+    {{render '@entry_byline'}}
+
+    {{render '@entry_timestamp'}}
+  {{/unless}}
+</header>

@@ -1,0 +1,37 @@
+title: Entry Footer
+context:
+  authors:
+    -
+      headingLevel: 3
+      headingLink: true
+      title: Evan Minto
+      description: Evan is the Editor-in-chief of Ani-Gamers, a freelance reviewer for Otaku USA Magazine, and a frequent anime convention panelist. You can read his ravings about anime, manga, games, politics, music, and more on Twitter @VamptVo.
+      modifierClass: summary--author-bio
+    -
+      headingLevel: 3
+      headingLink: true
+      title: David Estrella
+      description: David has been in the same room as people who write for anime magazines and websites.
+      modifierClass: summary--author-bio
+  topics:
+    -
+      subject: Posts
+      link: true
+    -
+      subject: Anime
+      link: true
+    -
+      subject: Manga
+      link: true
+    -
+      subject: Video Games
+      link: true
+    -
+      subject: Conventions
+      link: true
+    -
+      subject: Otakon 2017
+      link: true
+    -
+      subject: Masao Maruyama
+      link: true

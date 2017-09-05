@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="inner">
+    <section>
+      <h3>More Info</h3>
+
+      <ul class="site-footer_meta-links-list">
+        {{#each metaLinks}}
+          <li>
+            <a href="">{{this}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <h3>Blogroll</h3>
+
+      <ul class="site-footer_blogroll-list">
+        {{#each blogroll}}
+          <li>
+            <a href="">{{this}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section aria-label="Copyright Information">
+      {{render '@site_copyright_notice'}}
+    </section>
+  </div>
+</footer>

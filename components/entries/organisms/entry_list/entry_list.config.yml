@@ -1,0 +1,45 @@
+title: Entry List
+context:
+  entries:
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview
+    -
+      headingLevel: 2
+      title: Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+      subtitle: Mauris feugiat lorem nisl, ut bibendum purus finibus sed.
+      description: By Evan Minto and David Estrella
+      modifierClass: summary--entry-preview

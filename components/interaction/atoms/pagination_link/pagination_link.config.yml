@@ -1,0 +1,13 @@
+title: Pagination Link
+default: Next
+context:
+  text: Next
+  rel: next
+  modifierClass: pagination-link--next
+variants:
+  -
+    name: Previous
+    context:
+      text: Previous
+      rel: previous
+      modifierClass: pagination-link--previous

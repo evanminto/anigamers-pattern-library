@@ -1,0 +1,4 @@
+title: Search Form
+context:
+  placeholder: Search for reviews, podcasts, and more...
+  href: /images/icons.svg#icon_magnifying_glass

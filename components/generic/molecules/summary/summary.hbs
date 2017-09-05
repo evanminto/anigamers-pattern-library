@@ -1,0 +1,15 @@
+<article class="summary {{modifierClass}}">
+  {{#if headingImageLink}}<a href="" class="wrapper-link">{{/if}}
+    {{render '@flexible_image'}}
+
+    <header>
+      <h{{headingLevel}}>{{title}}</h{{headingLevel}}>
+
+      {{#if subtitle}}
+        <p>{{subtitle}}</p>
+      {{/if}}
+    </header>
+  {{#if headingImageLink}}</a>{{/if}}
+
+  <p>{{description}}</p>
+</article>

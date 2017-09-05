@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Oswald|Chau+Philomene+One|Open+Sans+Condensed:300'>
+    <link media="all" rel="stylesheet" href="{{ path '/css/settings.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/generic.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/elements.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/atoms.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/molecules.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/organisms.css' }}">
+
+    <script src="{{ path '/js/flexible-image.js' }}" defer></script>
+    <script src="{{ path '/js/site-header.js' }}" defer></script>
+
+    <title>Preview Layout</title>
+  </head>
+
+  <body class="{{_target.context.bodyClass}}">
+    {{{ yield }}}
+
+    <noscript id="deferred-styles">
+      <link media="all" rel="stylesheet" href="{{ path '/css/templates.css' }}">
+      <link media="all" rel="stylesheet" href="{{ path '/css/collages.css' }}">
+      <link media="all" rel="stylesheet" href="{{ themeFile }}">
+    </noscript>
+
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.style = 'display: none;';
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+  </body>
+</html>

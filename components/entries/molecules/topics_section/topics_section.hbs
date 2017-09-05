@@ -1,0 +1,11 @@
+<section class="topics-section">
+  <span class="topics-section-label">Filed Under</span>
+
+  <ul>
+    {{#each topics}}
+      <li>
+        {{> @subject_label}}
+      </li>
+    {{/each}}
+  </ul>
+</section>

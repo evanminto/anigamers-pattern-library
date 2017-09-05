@@ -1,0 +1,8 @@
+title: Subject Label
+context:
+  subject: Anime
+variants:
+  -
+    name: Link
+    context:
+      link: true

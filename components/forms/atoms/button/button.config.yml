@@ -1,0 +1,14 @@
+title: Button
+context:
+  text: Click here
+variants:
+  -
+    name: Submit
+    context:
+      type: submit
+      text: Submit
+  -
+    name: Button
+    context:
+      type: button
+      text: Click to trigger JS
