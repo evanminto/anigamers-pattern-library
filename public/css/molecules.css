@@ -24,6 +24,7 @@
 
 .site-social-links > * {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .site-social-links > * + * {
@@ -171,37 +172,15 @@
 /* Summary: Entry Preview */
 
 .summary--entry-preview {
-  border-radius: var(--border-radius);
-  box-shadow: 0 0.0625em 0.125em var(--box-shadow-color);
-  overflow: hidden;
-}
-
-.summary--entry-preview p {
-  font-size: var(--font-size-sm);
-}
-
-.summary--entry-preview h2 {
-  color: currentColor;
-}
-
-.summary--entry-preview ul {
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.summary--entry-preview li {
-  display: inline-block;
-  margin: 0;
-}
-
-.summary--entry-preview {
   display: block;
   padding: 7.5em 1.5em 1.5em 1.5em;
   position: relative;
 
   color: var(--off-white);
+
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.0625em 0.125em var(--box-shadow-color);
+  overflow: hidden;
 }
 
 .summary--entry-preview > * {
@@ -224,6 +203,14 @@
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
+.summary--entry-preview p {
+  font-size: var(--font-size-sm);
+}
+
+.summary--entry-preview h2 {
+  color: currentColor;
+}
+
 .summary--entry-preview .flexible-image {
   position: absolute;
   z-index: 0;
@@ -233,6 +220,57 @@
   right: 0;
 
   height: 100%;
+}
+
+/* Summary: Column */
+
+.summary--column {
+  display: block;
+  padding: 3em 1.5em 1.5em 1.5em;
+  position: relative;
+
+  color: var(--off-white);
+
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.0625em 0.125em var(--box-shadow-color);
+  overflow: hidden;
+}
+
+.summary--column > * {
+  position: relative;
+  z-index: 2;
+}
+
+.summary--column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--nihon-red-trans);
+}
+
+.summary--column h2 {
+  color: currentColor;
+}
+
+.summary--column .flexible-image {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+
+  filter: contrast(70%) grayscale(40%);
 }
 
 /* Summary: Entry Search Result */
