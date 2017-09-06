@@ -24,7 +24,7 @@
     <noscript id="deferred-styles">
       <link media="all" rel="stylesheet" href="{{ path '/css/templates.css' }}">
       <link media="all" rel="stylesheet" href="{{ path '/css/collages.css' }}">
-      <link media="all" rel="stylesheet" href="{{ themeFile }}">
+      {{#if _target.context.themeFile}}<link media="all" rel="stylesheet" href="{{ _target.context.themeFile }}">{{/if}}
     </noscript>
 
     <script>

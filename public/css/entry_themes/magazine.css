@@ -1,0 +1,19 @@
+@media (min-width: 35.5em) {
+  .entry-body .pull-quote-2017:nth-of-type(3n + 2) {
+    float: right;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    max-width: 33.333%;
+
+    text-align: right;
+  }
+
+  .entry-body .pull-quote-2017:nth-of-type(3n + 3) {
+    float: left;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    max-width: 33.333%;
+
+    text-align: left;
+  }
+}

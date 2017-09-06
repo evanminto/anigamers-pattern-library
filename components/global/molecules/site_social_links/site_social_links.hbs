@@ -2,7 +2,7 @@
   {{#each socialLinks}}
     <li>
       <a href="" class="wrapper-link">
-        <svg viewBox="0 0 120 120">
+        <svg viewBox="0 0 120 120" {{#if width}}width="{{width}}"{{/if}}>
           <use xlink:href="{{svgHref}}"></use>
           <title>{{title}}</title>
         </svg>

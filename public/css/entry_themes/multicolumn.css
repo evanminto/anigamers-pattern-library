@@ -1,18 +1,39 @@
 /* Multicolumn Theme */
+
+.entry-page main > .inner {
+  max-width: none;
+}
+
 .entry-body {
   columns: 33ch;
   column-gap: 1.5em;
 }
 
+.entry-body figure {
+  display: inline-block;
+}
+
+.entry-body h2,
 .entry-body h3,
+.entry-body h4,
 .entry-body hr,
 .entry-body img {
   column-span: all;
   margin-bottom: 1.5em;
 }
 
+.entry-body h2 + *,
 .entry-body h3 + *,
+.entry-body h4 + *,
 .entry-body hr + *,
 .entry-body img + * {
   margin-top: 0;
+}
+
+.entry-body .portrait-image {
+  column-span: none;
+}
+
+.entry-body .portrait-image + * {
+  margin-top: 1.5rem;
 }

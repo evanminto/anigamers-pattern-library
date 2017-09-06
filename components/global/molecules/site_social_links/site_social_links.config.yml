@@ -4,9 +4,12 @@ context:
     -
       svgHref: /images/icons.svg#icon_twitter
       title: Twitter
+      width: 30
     -
       svgHref: /images/icons.svg#icon_facebook
       title: Facebook
+      width: 30
     -
       svgHref: /images/icons.svg#icon_rss
       title: Subscribe
+      width: 30

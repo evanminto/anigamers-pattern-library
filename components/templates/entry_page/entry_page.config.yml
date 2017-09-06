@@ -40,3 +40,20 @@ context:
     -
       subject: Masao Maruyama
       link: true
+variants:
+  -
+    name: Magazine
+    context:
+      themeFile: /css/entry_themes/magazine.css
+  -
+    name: Magazine (Fancy)
+    context:
+      themeFile: /css/entry_themes/magazine_fancy.css
+  -
+    name: Magazine (Big)
+    context:
+      themeFile: /css/entry_themes/magazine_big.css
+  -
+    name: Multicolumn
+    context:
+      themeFile: /css/entry_themes/multicolumn.css
