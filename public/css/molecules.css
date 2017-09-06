@@ -153,13 +153,13 @@
   border-radius: var(--border-radius);
 }
 
-/* Summary: Author Bio */
+/* Summary: Staff */
 
-.summary--author-bio {
+.summary--staff {
   text-align: center;
 }
 
-.summary--author-bio .flexible-image {
+.summary--staff .flexible-image {
   display: inline-block;
   height: 7.5em;
   width: 7.5em;
@@ -386,6 +386,63 @@
   font-style: normal;
 }
 
-.entry-footer * + .summary--author-bio {
+.entry-footer * + .summary--staff {
   margin-top: 3em;
+}
+
+/* Staff Bio */
+
+.staff-bio > * + * {
+  margin-top: 0.375rem;
+}
+
+.staff-bio p {
+  margin-top: 0.75em;
+}
+
+.staff-bio::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.staff-bio address {
+  font-style: normal;
+}
+
+.staff-bio--title {
+  font-style: italic;
+}
+
+.staff-bio--title,
+.staff-bio address {
+  font-size: var(--font-size-sm);
+}
+
+.staff-bio .flexible-image {
+  width: 7.5rem;
+  height: 7.5rem;
+
+  float: left;
+  margin: 0 1.5rem 1.5rem 0;
+
+  border-radius: 100%;
+  shape-outside: border-box;
+  shape-margin: 1.5rem;
+}
+
+.staff-bio .flexible-image ~ * {
+  padding-left: 3.75rem;
+}
+
+/* Staff List */
+
+.staff-list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.staff-list > * + * {
+  margin-top: 3rem;
 }

@@ -48,6 +48,12 @@ main > .inner {
   max-width: 66ch;
 }
 
+/* Staff Page */
+
+/* .staff-page h1 {
+  text-align: center;
+} */
+
 @media (min-height: 35.5em) and (min-width: 35.5em) {
   body {
     padding-top: 3.5em;
@@ -67,22 +73,22 @@ main > .inner {
 
   /* Entry Page */
 
-  .entry-page .summary--author-bio {
+  .entry-page .summary--staff {
     max-width: 45em;
     text-align: left;
   }
 
-  .entry-page .summary--author-bio::after {
+  .entry-page .summary--staff::after {
     content: '';
     display: table;
     clear: both;
   }
 
-  .entry-page .summary--author-bio p {
+  .entry-page .summary--staff p {
     padding-left: 3.75em;
   }
 
-  .entry-page .summary--author-bio .flexible-image {
+  .entry-page .summary--staff .flexible-image {
     float: left;
     margin-bottom: 1.5em;
     margin-right: 1.5em;
@@ -130,6 +136,45 @@ main > .inner {
       text-align: right;
     }
   }
+
+  /* Staff Page */
+
+  .staff-page .staff-list {
+    margin-top: 3rem;
+  }
+
+  /* .staff-page h1 {
+    text-align: left;
+  }
+
+  .staff-page .staff-bio {
+    text-align: left;
+  }
+
+  .staff-page .staff-bio p {
+    padding-left: 4.5rem;
+  }
+
+  .entry-page .staff-bio::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .staff-page .staff-bio .flexible-image {
+    float: left;
+    margin: 0 1.5rem 1.5rem 0;
+    shape-outside: border-box;
+    shape-margin: 1.5rem;
+  }
+
+  .staff-page .staff-list {
+    margin-top: 3rem;
+  }
+
+  .staff-page .staff-list > * + * {
+    margin-top: 3rem;
+  } */
 }
 
 @media (min-width: 48em) {
