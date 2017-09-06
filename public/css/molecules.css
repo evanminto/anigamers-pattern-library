@@ -306,10 +306,101 @@
   font-style: normal;
 }
 
+/* Image Pair */
+
+.image-pair {
+  columns: 2 18rem;
+  column-gap: 1.5rem;
+}
+
+.image-pair img {
+  width: 100%;
+}
+
+.image-pair figcaption {
+  column-span: all;
+}
+
 /* Entry Body */
 
 .entry-body img {
   border-radius: var(--border-radius);
+}
+
+.entry-body .column-note {
+  font-size: var(--fon-size-sm);
+  font-style: italic;
+}
+
+.entry-body .column-note cite {
+  font-style: normal;
+}
+
+/* For use in Tofu CMS SCSS */
+/* .entry-body .sidebar {
+  @include entry-sidebar;
+}
+
+.entry-body p.pull-quoted {
+  @include entry-pull-quote;
+}
+
+.entry-body .pull-quote-2017 {
+  @include emphasis-font;
+  @include text-drop-shadow;
+
+  display: block;
+  margin: 1em 0;
+
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+
+  color: $blood-red;
+  border: 0 solid currentColor;
+} */
+
+.entry-body .intro-blurb {
+  font-size: var(--font-size-sm);
+}
+
+.entry-body .interview-intro-blurb {
+  font-style: italic;
+}
+
+.entry-body .interview-intro-blurb i,
+.entry-body .interview-intro-blurb em,
+.entry-body .interview-intro-blurb cite {
+  font-style: normal;
+}
+
+.entry-body .availability-blurb {
+  font-style: italic;
+}
+
+.entry-body .availability-blurb cite {
+  font-style: normal;
+}
+
+.entry-body .podcast-episode-list th {
+  text-align: left;
+}
+
+.entry-body .podcast-episode-list th,
+.entry-body .podcast-episode-list td {
+  padding: 0.5em;
+}
+
+.entry-body .review-rating {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #f15f4e;
+  text-align: center;
+}
+
+.entry-body .review-version {
+  font-style: italic;
 }
 
 /* Topics Section */
