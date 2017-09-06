@@ -226,8 +226,11 @@
 
 .summary--column {
   display: block;
-  padding: 3em 1.5em 1.5em 1.5em;
+  padding: 4.5em 1.5em 0.75em 1.5em;
   position: relative;
+
+  text-align: left;
+  text-transform: uppercase;
 
   color: var(--off-white);
 
@@ -256,7 +259,7 @@
   background: var(--nihon-red-trans);
 }
 
-.summary--column h2 {
+.summary--column h3 {
   color: currentColor;
 }
 

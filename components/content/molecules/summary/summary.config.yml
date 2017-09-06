@@ -8,7 +8,7 @@ variants:
   -
     name: Column
     context:
-      headingLevel: 2
+      headingLevel: 3
       subtitle: ''
       description: ''
       modifierClass: summary--column

@@ -38,6 +38,10 @@ main > .inner {
   text-align: left;
 }
 
+.home-page .columns-showcase {
+  margin-top: 3rem;
+}
+
 /* Entry Page */
 
 .entry-page main > .inner {
