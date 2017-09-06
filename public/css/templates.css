@@ -113,6 +113,12 @@ main > .inner {
     height: 9em;
   }
 
+  /* Entry Archive Page */
+
+  .entry-archive-page .entry-search-results-list {
+    margin-top: 3rem;
+  }
+
   @supports (display: grid) {
     /* Entry Page */
 
