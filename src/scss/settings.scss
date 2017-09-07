@@ -1,3 +1,6 @@
+@import 'base';
+@import 'tools';
+
 :root {
   --border-radius: 0.1875rem;
   --box-shadow-color: rgba(29, 35, 38, 0.3);
@@ -24,7 +27,7 @@
   --light-red: #c27a7c;
   --pacific-blue-hover: #3d6984;
   --yuurei-blue: #dde2e5;
-  --off-white: #f6f7f9;
+  --off-white: rgb(246, 247, 249);
   --cool-blue: #dde2e5;
   --cool-blue-hover: #dee3e6;
   --gray-blue: #dde2e5;
@@ -37,4 +40,5 @@
   --base-color: #e0e7e8;
   --base-dark-color: #c4c4c4;
   --secondary-base-color: #fdfefe;
-  --secondary-base-dark-color: #e0e7e8; }
+  --secondary-base-dark-color: #e0e7e8;
+}

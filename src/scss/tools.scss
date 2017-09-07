@@ -1,0 +1,129 @@
+@mixin sm-screen {
+  @media (min-width: 35.5em) {
+    @content;
+  }
+}
+
+@mixin sm-tall-screen {
+  @media (min-height: 35.5em) and (min-width: 35.5em) {
+    @content;
+  }
+}
+
+@mixin md-screen {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: 60em) {
+    @content;
+  }
+}
+
+@mixin xl-screen {
+  @media (min-width: 79em) {
+    @content;
+  }
+}
+
+@mixin input-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin input-active {
+  &:focus,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin link-active {
+  &:active,
+  &:focus,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin clear-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear-list-styling {
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin comma-list($serial: false, $comma: ',', $and: 'and') {
+  li {
+    display: inline;
+  }
+
+  li::after {
+    content: $comma ' ';
+  }
+
+  @if ($and) {
+    @if ($serial) {
+      li:nth-last-child(2)::after {
+        content: $comma ' ' $and ' ';
+      }
+
+      li:first-child:nth-last-child(2)::after {
+        content: ' ' $and ' ';
+      }
+    }
+    @else {
+      li:nth-last-child(2)::after {
+        content: ' ' $and ' ';
+      }
+    }
+  }
+
+  li:last-child::after {
+    content: '';
+  }
+}
+
+@mixin absolute-fill($size) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  @if ($size) {
+    width: 100%;
+    height: 100%;
+  }
+}

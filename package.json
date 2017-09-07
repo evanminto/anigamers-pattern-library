@@ -3,5 +3,37 @@
   "version": "0.1.0",
   "dependencies": {
     "@frctl/fractal": "^1.1.5"
+  },
+  "main": "fractal.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.0"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss src/scss/settings.scss public/css/settings.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanminto/anigamers-pattern-library.git"
+  },
+  "author": "Evan Minto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanminto/anigamers-pattern-library/issues"
+  },
+  "homepage": "https://github.com/evanminto/anigamers-pattern-library#readme",
+  "description": "",
+  "scripts": {
+    "build-settings-css": "node-sass --include-path scss src/scss/settings.scss public/css/settings.css",
+    "build-generic-css": "node-sass --include-path scss src/scss/generic.scss public/css/generic.css",
+    "build-elements-css": "node-sass --include-path scss src/scss/elements.scss public/css/elements.css",
+    "build-atoms-css": "node-sass --include-path scss src/scss/atoms.scss public/css/atoms.css",
+    "build-molecules-css": "node-sass --include-path scss src/scss/molecules.scss public/css/molecules.css",
+    "build-organisms-css": "node-sass --include-path scss src/scss/organisms.scss public/css/organisms.css",
+    "build-templates-css": "node-sass --include-path scss src/scss/templates.scss public/css/templates.css",
+    "build-css": "npm run build-settings-css && npm run build-generic-css && npm run build-elements-css && npm run build-atoms-css && npm run build-molecules-css && npm run build-organisms-css && npm run build-templates-css"
   }
 }
