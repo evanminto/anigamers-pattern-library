@@ -10,12 +10,14 @@ function setUpHeader(header) {
   });
 
   header.addEventListener('click', function(event) {
-    if (event.target.closest('.menu-toggle')) {
+    if (event.target.closest('.wrapper-link--menu-toggle')) {
+      event.preventDefault();
       header.classList.remove('site-header--search-open');
       header.classList.toggle('site-header--links-open');
     }
 
-    if (event.target.closest('.search-toggle')) {
+    if (event.target.closest('.wrapper-link--search-toggle')) {
+      event.preventDefault();
       header.classList.remove('site-header--links-open');
       header.classList.toggle('site-header--search-open');
       header.querySelector('input[type="search"]').focus();

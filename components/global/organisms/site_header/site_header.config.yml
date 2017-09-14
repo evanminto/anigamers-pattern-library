@@ -1,3 +1,11 @@
 title: Site Header
 context:
   siteLinksClass: js-site-header__links
+  menuToggle:
+    href: '#site_header_menu'
+  searchToggle:
+    href: '#site_header_search'
+  siteLinks:
+    id: site_header_menu
+  searchForm:
+    id: site_header_search

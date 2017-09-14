@@ -1,9 +1,9 @@
 <header class="site-header js-site-header">
   <div class="inner">
     {{render '@site_logo'}}
-    {{render '@menu_toggle'}}
-    {{> '@site_links'}}
-    {{render '@search_toggle'}}
-    {{render '@search_form'}}
+    {{render '@menu_toggle' menuToggle merge=true}}
+    {{render '@site_links' siteLinks merge=true}}
+    {{render '@search_toggle' searchToggle merge=true}}
+    {{render '@search_form' searchForm merge=true}}
   </div>
 </header>

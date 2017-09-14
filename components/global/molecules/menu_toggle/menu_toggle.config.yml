@@ -1,4 +1,5 @@
 title: Menu Toggle
 context:
-  href: /images/icons.svg#icon_hamburger
-  title: Menu
+  svg:
+    href: /images/icons.svg#icon_hamburger
+    title: Menu

@@ -26,12 +26,14 @@
   .site-header .site-links,
   .site-header .simple-text-form--search {
     display: none; }
-  .site-header--links-open .site-links {
+  .site-header--links-open .site-links,
+  .site-header .site-links:target {
     display: block;
     order: 2;
     flex: 1 1 100%;
     margin-top: 1.5em; }
-  .site-header--search-open .simple-text-form--search {
+  .site-header--search-open .simple-text-form--search,
+  .site-header .simple-text-form--search:target {
     display: block;
     display: flex;
     order: 3;

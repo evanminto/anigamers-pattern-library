@@ -40,14 +40,16 @@
     display: none;
   }
 
-  &--links-open .site-links {
+  &--links-open .site-links,
+  .site-links:target {
     display: block;
     order: 2;
     flex: 1 1 100%;
     margin-top: 1.5em;
   }
 
-  &--search-open .simple-text-form--search {
+  &--search-open .simple-text-form--search,
+  .simple-text-form--search:target {
     display: block;
     display: flex;
     order: 3;
