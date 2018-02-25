@@ -1,0 +1,25 @@
+body {
+  width: 100%; }
+
+.meta-links {
+  display: flex;
+  width: 100%; }
+  .meta-links li {
+    margin-right: 2.63158%;
+    margin-right: 2.63158vw; }
+    .meta-links li > a {
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem; }
+      .meta-links li > a:active .twitter-icon, .meta-links li > a:focus .twitter-icon, .meta-links li > a:hover .twitter-icon {
+        fill: #55acee; }
+      .meta-links li > a:active .facebook-icon, .meta-links li > a:focus .facebook-icon, .meta-links li > a:hover .facebook-icon {
+        display: none; }
+      .meta-links li > a:active .facebook-icon-full, .meta-links li > a:focus .facebook-icon-full, .meta-links li > a:hover .facebook-icon-full {
+        display: inherit; }
+    .meta-links li svg {
+      height: 100%; }
+    .meta-links li a:hover {
+      background: none; }
+    .meta-links li .facebook-icon-full {
+      display: none; }

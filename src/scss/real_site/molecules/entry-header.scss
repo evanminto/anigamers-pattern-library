@@ -1,0 +1,63 @@
+@import '../_base';
+
+$entry-hr-width: 0.1em;
+$entry-border-width: $entry-hr-width * 1.6;
+
+%entry-heading {
+  @include heading-font;
+
+  font-weight: normal;
+}
+
+.entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: $font-size-xs;
+
+  .titles {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    @extend %entry-heading;
+
+    margin-bottom: 0;
+    font-size: $font-size-xl;
+    line-height: 1.365333333333333;
+
+    a {
+      padding: 0;
+
+      color: $nihon-red;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        background: none;
+        color: $primary-dark-color;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: 0.2em;
+
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+
+  .byline {
+    flex: 0 1 auto;
+    margin: 0 2em 0.5em 0;
+
+    font-style: normal;
+
+    ul {
+      @include comma-list(true);
+
+      display: inline;
+    }
+  }
+}

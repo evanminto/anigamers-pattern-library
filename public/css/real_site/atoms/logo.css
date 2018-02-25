@@ -1,0 +1,22 @@
+body {
+  width: 100%; }
+
+.logo {
+  flex: 0 1 31.57895%;
+  margin-left: 18.42105%;
+  margin-right: 18.42105%;
+  flex-grow: 1;
+  order: 1;
+  align-self: center;
+  margin: 0 1rem;
+  text-align: center; }
+  .logo a {
+    display: inline-block;
+    max-width: 13.5rem; }
+    .logo a:active, .logo a:focus, .logo a:hover {
+      background: none; }
+  .logo img {
+    width: 100%; }
+    .logo img:hover {
+      -webkit-filter: drop-shadow(0px 1px 1px rgba(29, 35, 38, 0.1));
+      filter: drop-shadow(0px 1px 1px rgba(29, 35, 38, 0.1)); }

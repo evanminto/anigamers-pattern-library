@@ -1,0 +1,15 @@
+body {
+  width: 100%; }
+
+.svg-icon {
+  height: 1em;
+  width: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0;
+  vertical-align: middle;
+  transition: fill 166.66667ms ease-out, stroke 166.66667ms ease-out; }
+  .svg-icon.-with-stroke {
+    stroke-width: 1em; }
+  .svg-icon.-with-fill {
+    fill: currentColor; }

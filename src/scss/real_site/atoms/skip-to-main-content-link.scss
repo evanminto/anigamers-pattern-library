@@ -1,0 +1,9 @@
+.skip-to-main-content-link {
+  position: absolute;
+  top: -2em;
+
+  &:active,
+  &:focus {
+    position: static;
+  }
+}

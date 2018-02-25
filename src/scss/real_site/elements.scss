@@ -1,0 +1,238 @@
+@import '_base';
+
+body {
+  --header-z-index: $header-z-index;
+  --border-radius: $border-radius;
+  --header-icon-size: $header-icon-size;
+  --menu-icon-size: $menu-icon-size;
+  --box-shadow-color: $box-shadow-color;
+  --text-shadow-color: $text-shadow-color;
+
+  --font-size-xxl: $font-size-xxl;
+  --font-size-xl: $font-size-xl;
+  --font-size-lg: $font-size-lg;
+  --font-size-md: $font-size-md;
+  --font-size-sm: $font-size-sm;
+  --font-size-xs: $font-size-xs;
+  --font-size-xxs: $font-size-xxs;
+
+  --font-family-heading: Oswald, Verdana, sans-serif;
+  --font-family-emphasis: "Open Sans Condensed", Futura, sans-serif;
+  --font-family-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --nihon-red: $nihon-red;
+  --blood-red: $blood-red;
+  --sky-blue: $sky-blue;
+  --pacific-blue: $pacific-blue;
+  --light-red: $light-red;
+  --pacific-blue-hover: $pacific-blue-hover;
+  --yuurei-blue: $yuurei-blue;
+  --off-white: $off-white;
+  --cool-blue: $cool-blue;
+  --cool-blue-hover: $cool-blue-hover;
+  --gray-blue: $gray-blue;
+  --primary-color: $primary-color;
+  --primary-dark-color: $primary-dark-color;
+  --primary-light-color: $primary-light-color;
+  --secondary-color: $secondary-color;
+  --secondary-dark-color: $secondary-dark-color;
+  --secondary-light-color: $secondary-light-color;
+  --base-color: $base-color;
+  --base-dark-color: $base-dark-color;
+  --secondary-base-color: $secondary-base-color;
+  --secondary-base-dark-color: $secondary-base-dark-color;
+  --twitter-blue: $twitter-blue;
+
+  @include default-font;
+
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 3.5rem 0 0 0;
+  font-size: 0.875rem;
+  color: $secondary-dark-color;
+  background-color: $base-color;
+}
+
+template {
+  display: none !important;
+}
+
+address,
+article,
+aside,
+canvas,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+address {
+    font-style: normal;
+    display: inline;
+}
+
+cite {
+    font-style: italic;
+}
+
+em cite,
+i cite {
+    font-style: normal;
+}
+
+ul {
+  @include clear-spacing;
+
+  list-style: none;
+}
+
+p {
+  @include block-center;
+
+  & + p {
+    margin-top: $vertical-rhythm;
+  }
+}
+
+img {
+  border: none;
+}
+
+:-o-prefocus,
+img {
+  width: 100%;
+}
+
+:-o-prefocus,
+.image-pair {
+  columns: auto !important;
+}
+
+svg {
+  width: 100%;
+}
+
+a {
+  transition:
+    background ($transition-1-frame * 4) ease-out,
+    color ($transition-1-frame * 4) ease-out,
+    text-decoration ($transition-1-frame * 4) ease-out;
+
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    border-radius: $border-radius;
+    border-radius: var(--border-radius);
+    text-decoration: underline;
+    text-decoration: underline solid $transparent-nihon-red;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+  }
+
+  &:link,
+  &:active {
+    color: $primary-color;
+    color: var(--primary-color);
+  }
+
+  &:visited {
+    color: $primary-dark-color;
+    color: var(--primary-dark-color);
+  }
+
+  &:focus,
+  &:hover {
+    color: $secondary-base-color;
+    color: var(--secondary-base-color);
+    background: $primary-color;
+    background: var(--primary-color);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $vertical-rhythm 0;
+}
+
+input {
+  box-sizing: border-box;
+  height: $vertical-rhythm * 1.5;
+  padding: ($vertical-rhythm / 2) 2ch;
+
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  font-size: 0.8rem;
+  font-family: inherit;
+  line-height: 1;
+
+  color: $pacific-blue;
+  border: 0;
+
+  border-radius: $border-radius;
+
+  transition: border ($transition-1-frame * 4) ease-out;
+
+  @include drop-shadow;
+
+  &:focus {
+    @include drop-shadow(1);
+  }
+}
+
+button {
+  @include drop-shadow;
+
+  box-sizing: border-box;
+  height: $vertical-rhythm * 1.5;
+  padding: ($vertical-rhythm / 2) 2ch;
+
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  font-size: inherit;
+
+  background: $secondary-color;
+  color: $secondary-base-color;
+  border: 0;
+  border-radius: $border-radius;
+
+  transition:
+    background ($transition-1-frame * 4) ease-out,
+    color ($transition-1-frame * 4) ease-out;
+
+  &:hover,
+  &:focus {
+    @include drop-shadow(1);
+
+    background: $secondary-dark-color;
+  }
+
+  &:not([type]),
+  &[type="submit"] {
+    background: $primary-color;
+
+    &:hover,
+    &:focus {
+      background: $primary-dark-color;
+    }
+  }
+}
+
+main {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+<header class="entry-header">
+  <div class="titles">
+    <h1 class="title">
+      <a id="entry_title_link" href="">
+        {{title}}
+      </a>
+    </h1>
+
+    {{#if subtitle}}
+      <p class="subtitle">{{subtitle}}</p>
+    {{/if}}
+  </div>
+
+  {{#if authors}}
+    <address id="entry_byline" class="byline">
+      By
+      <ul>
+        {{#each authors}}
+          <li><a href="" rel="author">{{this}}</a></li>
+        {{/each}}
+      </ul>
+    </address>
+  {{/if}}
+
+  {{#if timestamp}}
+    <time class="publication-date" datetime="Sat Feb  3 18:39:00 2018">Saturday, February  3, 2018</time>
+  {{/if}}
+</header>

@@ -1,0 +1,456 @@
+@import '_semantic-grid';
+
+@import '_colors';
+@import '_fonts';
+@import '_responsive';
+
+$columns: 12;
+$column-width: 54;
+$gutter-width: 24;
+$total-width: 100%;
+
+$transition-1-frame: (1000ms / 24);
+
+$space-md: $vertical-rhythm;
+$space-lg: $space-md * 2;
+$space-xl: $space-lg * 2;
+$space-sm: $space-md / 2;
+$space-xs: $space-sm / 2;
+
+$header-z-index: 10;
+$border-small: 0.0625rem;
+$border-radius: 0.1875rem;
+$header-icon-size: 1.4rem;
+$menu-icon-size: 1.5 * $header-icon-size;
+$box-shadow-1: 0 0.0625rem 0.125rem $box-shadow-color;
+$box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
+
+// For some reason this isn't working in Compass.
+@mixin input-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin undo-clearfix {
+  &::after {
+    content: none;
+  }
+}
+
+@mixin block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin clear-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 200%;
+}
+
+@mixin drop-shadow($height: 0) {
+  box-shadow: 0px #{1px + $height} #{2px + $height} $box-shadow-color;
+}
+
+@mixin filter-drop-shadow($height: 0) {
+  -webkit-filter: drop-shadow(0px #{1px + $height} #{1px + $height} rgba($box-shadow-color, 0.1));
+          filter: drop-shadow(0px #{1px + $height} #{1px + $height} rgba($box-shadow-color, 0.1));
+}
+
+@mixin cutout-drop-shadow($height: 0) {
+  box-shadow: 0px #{1px + $height} #{2px + $height} opacify($box-shadow-color, 0.1) inset;
+}
+
+@mixin text-drop-shadow {
+  text-shadow: 0px 0px 2px $text-shadow-color;
+}
+
+@mixin tinted-bg($desaturation, $tint-color) {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $tint-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-filter: grayscale($desaturation);
+
+    @content;
+  }
+}
+
+@mixin comma-list($serial: false, $comma: ',', $and: 'and') {
+  li {
+    display: inline;
+
+    &::after {
+      content: $comma ' ';
+    }
+  }
+
+  @if ($and) {
+    @if ($serial) {
+      li {
+        &:nth-last-child(2)::after {
+          content: $comma ' ' $and ' ';
+        }
+
+        &:first-child:nth-last-child(2)::after {
+          content: ' ' $and ' ';
+        }
+      }
+    }
+    @else {
+      li:nth-last-child(2)::after {
+        content: ' ' $and ' ';
+      }
+    }
+  }
+
+  li:last-child::after {
+    content: '';
+  }
+}
+
+@mixin medium-entry {
+  flex: 1 0 50%;
+  display: flex;
+
+  article {
+    flex: 1 0 100%;
+    display: flex;
+  }
+
+  .entry {
+    flex: 1 0 100%;
+    display: flex;
+
+    > a:first-of-type {
+      flex: 1 0 100%;
+      display: flex;
+    }
+  }
+
+  .metadata {
+    padding-left: gridsystem-gutter-width() * 2;
+    padding-right: gridsystem-gutter-width() * 2;
+  }
+
+  &:nth-child(1) .metadata {
+    padding-right: calc(#{gridsystem-gutter-width()} + 0.75rem);
+  }
+
+  &:nth-child(2) .metadata {
+    padding-left: calc(#{gridsystem-gutter-width()} + 0.75rem);
+  }
+
+  .metadata {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+}
+
+@mixin small-entry {
+  flex-grow: 1;
+  width: 33.333%;
+
+  article {
+    height: 18em;
+  }
+}
+
+@mixin list-entry {
+  margin: 1.5rem 0;
+
+  .entry > a {
+    @include row;
+
+    &:hover {
+      border-radius: 0;
+      color: inherit;
+      background: none;
+
+      h1 {
+        color: $primary-dark-color;
+      }
+
+      .thumbnail {
+        @include drop-shadow(1);
+      }
+    }
+  }
+
+  .thumbnail {
+    @include column(5);
+    @include drop-shadow;
+
+    position: static;
+    height: 9rem;
+    max-width: gridsystem-column-width(5);
+    object-fit: cover;
+    object-position: center center;
+    border-radius: $border-radius;
+  }
+
+  .metadata {
+    @include column(7);
+  }
+
+  h1 {
+    @include heading-font;
+
+    margin-bottom: 0.2em;
+    font-size: $font-size-sm;
+    color: $primary-color;
+  }
+
+  .subtitle {
+    font-size: $font-size-xs;
+    color: $primary-color;
+  }
+
+  .authors,
+  .topics {
+    display: none;
+  }
+
+  .publication-date {
+    margin-top: 1em;
+    font-size: $font-size-xxs;
+    color: $secondary-dark-color;
+  }
+
+  @include small-screen {
+    .thumbnail {
+      @include column(4);
+
+      max-width: gridsystem-column-width(4);
+    }
+
+    .metadata {
+      @include column(8);
+    }
+
+    h1 {
+      font-size: $font-size-md;
+    }
+
+    .subtitle {
+      font-size: $font-size-sm;
+    }
+
+    .publication-date {
+      font-size: $font-size-xs;
+    }
+  }
+
+  @include large-screen {
+    .thumbnail {
+      @include column(3);
+
+      max-width: gridsystem-column-width(3);
+    }
+
+    .metadata {
+      @include column(9);
+    }
+
+    h1 {
+      font-size: $font-size-lg;
+    }
+
+    .subtitle {
+      font-size: $font-size-md;
+    }
+
+    .publication-date {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+@function card-metadata-padding($cards) {
+  @return gridsystem-gutter-width() * $total-width / (($total-width - (($cards + 1) * gridsystem-gutter-width())) / $cards);
+}
+
+@mixin card-entry {
+  @include column(6, $columns, false);
+
+  display: flex;
+  float: none;
+  margin-left: gridsystem-gutter-full-width();
+
+  .entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    border: 0;
+    color: #000000;
+
+    box-shadow: none;
+    text-shadow: none;
+
+    &:focus,
+    &:hover {
+      h1 {
+        color: $primary-dark-color;
+      }
+
+      .thumbnail {
+        @include drop-shadow(1);
+      }
+
+      // Nested to match the specificity it's overriding.
+      .metadata {
+        background: none;
+      }
+    }
+
+    & > a:first-of-type {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      color: #000000;
+      background: none;
+    }
+
+    header {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: $font-size-md;
+      color: $primary-color;
+    }
+
+    .subtitle {
+      display: none;
+    }
+
+    p,
+    .topics,
+    .authors {
+      margin: 0.5em 0;
+      color: $secondary-dark-color;
+    }
+
+    .authors,
+    .publication-date,
+    .topics {
+      display: block;
+    }
+
+    // Nested to match the specificity it's overriding.
+    .metadata {
+      border-radius: none;
+      background: none;
+    }
+
+    :visited h1 {
+      color: $primary-dark-color;
+    }
+  }
+
+  .thumbnail {
+    @include drop-shadow;
+
+    display: block;
+    height: 10rem;
+    position: static;
+    border-radius: $border-radius;
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .metadata {
+    display: block;
+    flex: 0 0 auto;
+    position: static;
+    padding: 0.75rem 0 0 0;
+  }
+
+  .metadata-inner {
+    position: static;
+  }
+}
+
+@mixin absolute-fill($size) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  @if ($size) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin menu-icon($size, $stroke-size, $color) {
+  $height: $size - 2 * $stroke-size;
+
+  position: relative;
+  box-sizing: border-box;
+  width: $size;
+  height: $height;
+  border-top: $stroke-size solid $color;
+  border-bottom: $stroke-size solid $color;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $stroke-size;
+    top: ($height - 3 * $stroke-size) * 0.5;
+    background: $color;
+  }
+}

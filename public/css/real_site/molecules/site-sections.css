@@ -1,0 +1,21 @@
+body {
+  width: 100%; }
+
+.site-sections {
+  display: flex;
+  font-size: 1rem; }
+  .site-sections a {
+    color: #da332b;
+    display: block;
+    padding: 0.3em 0.7em; }
+    .site-sections a:visited {
+      color: #992224; }
+    .site-sections a:active, .site-sections a:focus, .site-sections a:hover {
+      color: #fdfefe;
+      background: #da332b;
+      text-decoration: underline;
+      text-decoration: underline solid #da332b; }
+      .site-sections a:active:visited, .site-sections a:focus:visited, .site-sections a:hover:visited {
+        background: #992224;
+        text-decoration: underline;
+        text-decoration: underline solid #992224; }

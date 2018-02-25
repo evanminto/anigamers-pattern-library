@@ -1,0 +1,30 @@
+title: Article
+context:
+  css:
+    -
+      src: /css/real_site/beta.css
+      media: all
+    -
+      src: /css/real_site/header.css
+      media: all
+    -
+      src: /css/real_site/footer.css
+      media: all
+    -
+      src: /css/real_site/beta-medium.css
+      media: "(min-width: 53.75em)"
+    -
+      src: /css/real_site/header-large.css
+      media: "(min-width: 60em)"
+    -
+      src: /css/real_site/entry-legacy.css
+      media: all
+    -
+      src: /css/real_site/article.css
+      media: all
+    -
+      src: /css/real_site/article-small.css
+      media: "(min-width: 35.5em)"
+    -
+      src: /css/real_site/page.css
+      media: all

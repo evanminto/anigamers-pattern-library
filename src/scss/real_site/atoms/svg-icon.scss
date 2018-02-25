@@ -1,0 +1,24 @@
+@import '../_base';
+
+.svg-icon {
+  height: 1em;
+  width: auto;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0;
+
+  vertical-align: middle;
+
+  transition:
+    fill ($transition-1-frame * 4) ease-out,
+    stroke ($transition-1-frame * 4) ease-out;
+
+  &.-with-stroke {
+    stroke-width: 1em;
+  }
+
+  &.-with-fill {
+    fill: currentColor;
+  }
+}

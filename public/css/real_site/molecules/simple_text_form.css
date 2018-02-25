@@ -1,0 +1,13 @@
+.simple-text-form {
+  align-items: center;
+  display: block;
+  display: flex; }
+  .simple-text-form > * {
+    float: left; }
+    .simple-text-form > * + * {
+      margin-left: 0.8rem; }
+  .simple-text-form::after {
+    content: '';
+    clear: both;
+    overflow: hidden;
+    display: table; }

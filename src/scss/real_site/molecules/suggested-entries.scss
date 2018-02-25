@@ -1,0 +1,26 @@
+@import '../_base';
+
+.suggested-entries {
+  font-size: $font-size-xs;
+
+  margin: $space-lg 0;
+
+  > * {
+    margin: 0;
+
+    + * {
+      margin-top: $space-xs;
+    }
+  }
+
+  > h1 {
+    @include heading-font;
+
+    font-size: $font-size-lg;
+    font-weight: normal;
+  }
+}
+
+.suggested-entries > ul > * {
+  margin-bottom: 1.5rem;
+}

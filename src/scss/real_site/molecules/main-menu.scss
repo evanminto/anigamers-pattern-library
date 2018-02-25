@@ -1,0 +1,31 @@
+.main-menu {
+  display: none;
+  padding: 0;
+  order: 3;
+  display: none;
+  flex-wrap: wrap;
+  width: 100%;
+
+  nav {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .site-sections {
+    display: flex;
+    font-size: 1rem;
+  }
+
+  .meta-links {
+    margin-top: 0;
+
+    li > a {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+}

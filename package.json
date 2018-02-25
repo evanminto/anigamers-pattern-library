@@ -9,11 +9,20 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "node-sass": "^4.5.3",
+    "node-sass": "^3.13.1",
     "nodemon": "^1.12.0"
   },
   "scripts": {
-    "build-css": "node-sass --include-path scss src/scss/settings.scss public/css/settings.css"
+    "build-settings-css": "node-sass --include-path scss src/scss/settings.scss public/css/settings.css",
+    "build-generic-css": "node-sass --include-path scss src/scss/generic.scss public/css/generic.css",
+    "build-elements-css": "node-sass --include-path scss src/scss/elements.scss public/css/elements.css",
+    "build-atoms-css": "node-sass --include-path scss src/scss/atoms.scss public/css/atoms.css",
+    "build-molecules-css": "node-sass --include-path scss src/scss/molecules.scss public/css/molecules.css",
+    "build-organisms-css": "node-sass --include-path scss src/scss/organisms.scss public/css/organisms.css",
+    "build-templates-css": "node-sass --include-path scss src/scss/templates.scss public/css/templates.css",
+    "build-css-old": "npm run build-settings-css && npm run build-generic-css && npm run build-elements-css && npm run build-atoms-css && npm run build-molecules-css && npm run build-organisms-css && npm run build-templates-css",
+    "build-css": "node-sass --include-path scss src/scss/ --output public/css/",
+    "build-and-start": "npm run build-css && fractal start"
   },
   "repository": {
     "type": "git",
@@ -25,15 +34,5 @@
     "url": "https://github.com/evanminto/anigamers-pattern-library/issues"
   },
   "homepage": "https://github.com/evanminto/anigamers-pattern-library#readme",
-  "description": "",
-  "scripts": {
-    "build-settings-css": "node-sass --include-path scss src/scss/settings.scss public/css/settings.css",
-    "build-generic-css": "node-sass --include-path scss src/scss/generic.scss public/css/generic.css",
-    "build-elements-css": "node-sass --include-path scss src/scss/elements.scss public/css/elements.css",
-    "build-atoms-css": "node-sass --include-path scss src/scss/atoms.scss public/css/atoms.css",
-    "build-molecules-css": "node-sass --include-path scss src/scss/molecules.scss public/css/molecules.css",
-    "build-organisms-css": "node-sass --include-path scss src/scss/organisms.scss public/css/organisms.css",
-    "build-templates-css": "node-sass --include-path scss src/scss/templates.scss public/css/templates.css",
-    "build-css": "npm run build-settings-css && npm run build-generic-css && npm run build-elements-css && npm run build-atoms-css && npm run build-molecules-css && npm run build-organisms-css && npm run build-templates-css"
-  }
+  "description": ""
 }

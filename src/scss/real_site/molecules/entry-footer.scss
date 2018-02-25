@@ -1,0 +1,9 @@
+@import '../_base';
+
+.entry-footer {
+  clear: both;
+
+  > section {
+    margin: $space-lg 0;
+  }
+}

@@ -1,0 +1,145 @@
+@import '_base';
+
+.menu-toggle {
+  @include column(2);
+}
+
+.menu-label {
+  display: block;
+  width: $header-icon-size;
+
+  > svg {
+    display: block;
+    stroke: currentColor;
+    stroke-width: 15px;
+  }
+}
+
+.main-menu-link {
+  order: 0;
+}
+
+.main-menu-close-link {
+  margin-top: 1.5rem;
+}
+
+.header-search-link {
+  order: 2;
+
+  .svg-icon {
+    height: 1.4rem;
+  }
+}
+
+.main-menu:target,
+[aria-expanded="true"] + .main-menu {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+
+  nav {
+    font-size: 2rem;
+  }
+
+  .meta-links {
+    margin-top: 3rem;
+  }
+
+  .site-sections {
+    display: block;
+    font-size: $font-size-lg;
+
+    li {
+      display: block;
+    }
+  }
+
+  .meta-links {
+    justify-content: center;
+
+    li > a {
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+    }
+  }
+}
+
+[aria-expanded="false"] + .main-menu {
+  display: none;
+}
+
+.header-search-form:target,
+[aria-expanded="true"] + .header-search-form {
+  display: block;
+  display: flex;
+}
+
+.header-search-form:target {
+  flex: 1 1 100%;
+  margin-top: ($vertical-rhythm / 2);
+}
+
+[aria-expanded="true"] + .header-search-form {
+  flex: 1 1 auto;
+  margin-top: 0;
+}
+
+[aria-expanded="false"] + .header-search-form {
+  display: none;
+}
+
+.site-header {
+  @include drop-shadow(1);
+
+  display: flex;
+  align-items: stretch;
+  min-height: 3.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $header-z-index;
+  overflow: hidden;
+  background: $secondary-base-color;
+
+  &.-search-open {
+    .logo,
+    .main-menu-link,
+    .main-menu,
+    .header-search-link {
+      display: none;
+    }
+  }
+
+  > .content {
+    @include row;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+}
+
+body {
+  &.menu-open {
+    overflow: hidden;
+
+    .site-header {
+      align-content: flex-start;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+@media (print) {
+  .site-header {
+    display: none;
+  }
+}

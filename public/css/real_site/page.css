@@ -1,0 +1,22 @@
+.profile-page .profile-info-box {
+  margin-top: 2rem;
+  clear: both; }
+  .profile-page .profile-info-box .name {
+    margin-right: 1em;
+    font-weight: bold; }
+  .profile-page .profile-info-box .title {
+    margin-right: 1em;
+    font-style: italic; }
+
+.profile-page .avatar {
+  float: left;
+  margin-right: 1rem;
+  max-width: 5rem;
+  border-radius: 100%; }
+
+.profile-page .profile-footer-box {
+  margin-top: 1rem; }
+
+.profile-page .next-profile-page {
+  margin-top: 2rem;
+  font-weight: bold; }

@@ -1,0 +1,39 @@
+$type-scale: 1.25;
+$vertical-rhythm: 1.6rem;
+
+// Absolute Font Sizes
+$font-size-sm: 1rem;
+$font-size-md: $font-size-sm * $type-scale;
+
+$font-size-lg: $font-size-md * $type-scale;
+$font-size-xl: $font-size-lg * $type-scale;
+$font-size-xxl: $font-size-xl * $type-scale;
+
+$font-size-xs: $font-size-sm / $type-scale;
+$font-size-xxs: $font-size-xs / $type-scale;
+
+// Relative Font Sizes
+$font-size-larger: 1em * $type-scale;
+$font-size-smaller: 1em / $type-scale;
+
+// Line Heights
+$line-height-md: ($vertical-rhythm * 1.125) / $font-size-md;
+
+$line-height-lg: ($vertical-rhythm * 1.25) / $font-size-lg;
+$line-height-xl: ($vertical-rhythm * 1.5) / $font-size-xl;
+$line-height-xxl: ($vertical-rhythm * 1.75) / $font-size-xxl;
+
+$line-height-sm: $vertical-rhythm / $font-size-sm;
+$line-height-xs: $vertical-rhythm / $font-size-xs;
+
+@mixin heading-font {
+  font-family: Oswald, Verdana, sans-serif;
+}
+
+@mixin emphasis-font {
+  font-family: "Open Sans Condensed", Futura, sans-serif;
+}
+
+@mixin default-font {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

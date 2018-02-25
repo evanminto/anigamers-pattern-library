@@ -1,0 +1,45 @@
+@import '../_base';
+
+.meta-links {
+  display: flex;
+  width: 100%;
+
+  li {
+    margin-right: gridsystem-gutter-width();
+    margin-right: #{gridsystem-gutter-width() / (gridsystem-gutter-width() * 0 + 1)}vw;
+
+    & > a {
+      display: block;
+      width: $header-icon-size;
+      height: $header-icon-size;
+
+      &:active,
+      &:focus,
+      &:hover {
+        .twitter-icon {
+          fill: $twitter-blue;
+        }
+
+        .facebook-icon {
+          display: none;
+        }
+
+        .facebook-icon-full {
+          display: inherit;
+        }
+      }
+    }
+
+    svg {
+      height: 100%;
+    }
+
+    a:hover {
+      background: none;
+    }
+
+    .facebook-icon-full {
+      display: none;
+    }
+  }
+}

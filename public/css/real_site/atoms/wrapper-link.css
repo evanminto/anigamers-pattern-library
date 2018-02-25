@@ -1,0 +1,9 @@
+body {
+  width: 100%; }
+
+.wrapper-link {
+  display: block; }
+  .wrapper-link:active, .wrapper-link:focus, .wrapper-link:hover {
+    background: none;
+    color: #992224;
+    color: var(--blood-red); }

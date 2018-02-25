@@ -1,0 +1,5 @@
+.skip-to-main-content-link {
+  position: absolute;
+  top: -2em; }
+  .skip-to-main-content-link:active, .skip-to-main-content-link:focus {
+    position: static; }

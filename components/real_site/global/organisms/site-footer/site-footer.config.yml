@@ -1,0 +1,9 @@
+title: Site Footer
+context:
+  css:
+    -
+      src: /css/real_site/beta.css
+      media: all
+    -
+      src: /css/real_site/footer.css
+      media: all

@@ -1,0 +1,60 @@
+@import '../_base';
+
+.suggested-entry {
+  > .wrapper-link {
+    color: $nihon-red;
+
+    &:visited {
+      color: $blood-red;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $blood-red;
+
+      .thumbnail {
+        @include drop-shadow(1);
+      }
+    }
+  }
+
+  address,
+  .authors {
+    display: inline;
+  }
+
+  .authors {
+    @include comma-list(true);
+  }
+
+  .thumbnail {
+    @include drop-shadow;
+
+    height: 12rem;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+
+    background-size: cover;
+    background-position: center center;
+
+    border-radius: $border-radius;
+  }
+
+  .title {
+    @include heading-font;
+
+    margin-bottom: 0.2em;
+
+    font-size: $font-size-md;
+    font-weight: normal;
+  }
+
+  .byline {
+    margin-bottom: 0.3em;
+  }
+}

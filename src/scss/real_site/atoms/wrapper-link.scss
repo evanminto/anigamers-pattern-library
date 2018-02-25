@@ -1,0 +1,13 @@
+@import '../_base';
+
+.wrapper-link {
+  display: block;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: none;
+    color: $blood-red;
+    color: var(--blood-red);
+  }
+}

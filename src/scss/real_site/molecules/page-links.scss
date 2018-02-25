@@ -1,0 +1,55 @@
+@import '../_base';
+
+.page-links {
+  padding: 1em;
+
+  font-size: $font-size-md;
+  text-align: center;
+
+  .curr-page {
+    margin: 0 0.6em;
+  }
+
+  a {
+    @include drop-shadow;
+
+    display: inline-block;
+    height: 1.6em;
+    margin-bottom: 0.2em;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 1.6em;
+
+    background: $primary-color;
+    color: $secondary-base-color;
+    text-decoration: none;
+
+    border-radius: 0.8em;
+
+    &:hover {
+      @include drop-shadow(1);
+
+      background: $primary-dark-color;
+    }
+
+    &::before {
+      box-sizing: border-box;
+      display: block;
+      height: 100%;
+      padding: 0.1em 0 0 0;
+      width: 100%;
+
+      font-weight: bold;
+    }
+  }
+
+  .prev-link::before {
+    content: '\003c';
+    padding-right: 0.1em;
+  }
+
+  .next-link::before {
+    content: '\003e';
+    padding-left: 0.1em;
+  }
+}

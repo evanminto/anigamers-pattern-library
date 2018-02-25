@@ -1,0 +1,51 @@
+// Slightly lighten a color
+// @access public
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+// @access public
+// @param {Color} $color - color to shade
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$nihon-red: rgb(218, 51, 43);
+$blood-red: rgb(153, 34, 36);
+$sky-blue: rgb(43, 181, 193);
+$pacific-blue: rgb(12, 67, 101);
+
+$transparent-nihon-red: rgba($nihon-red, 0.5);
+$light-red: tint($blood-red, 40%);
+$pacific-blue-hover: tint($pacific-blue, 20%);
+$yuurei-blue: tint(desaturate($pacific-blue, 30%), 85%);
+$off-white: tint($yuurei-blue, 80%);
+$cool-blue: $yuurei-blue;
+$cool-blue-hover: tint($cool-blue, 2%);
+$gray-blue: $yuurei-blue;
+
+// Semantic colors
+$primary-color: $nihon-red;
+$primary-dark-color: $blood-red;
+$primary-light-color: tint($primary-color, 20%);
+$secondary-color: $sky-blue;
+$secondary-dark-color: $pacific-blue;
+$secondary-light-color: tint($secondary-color, 20%);
+$base-color: desaturate(tint($secondary-color, 80%), 40%);
+$base-dark-color: desaturate(tint($secondary-dark-color, 70%), 40%);
+$secondary-base-color: tint($base-color, 95%);
+$secondary-base-dark-color: $base-color;
+
+// Third-party colors
+$twitter-blue: rgb(85, 172, 238);
+$color-blue-facebook: #3b5998;
+$color-blue-twitter: #55acee;
+
+$box-shadow-color: rgba(darken($gray-blue, 75%), 0.3);
+$text-shadow-color: transparentize($box-shadow-color, 0.15);

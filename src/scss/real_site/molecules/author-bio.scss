@@ -1,0 +1,43 @@
+@import '../_base';
+
+.author-bio {
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: center;
+
+  img {
+    display: block;
+    height: 4.8rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 4.8rem;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+  }
+
+  &__avatar-link {
+    display: block;
+  }
+
+  @include small-screen {
+    text-align: left;
+
+    &::after {
+      content: '';
+
+      display: table;
+      clear: both;
+    }
+
+    img {
+      margin-right: 0.8rem;
+
+      float: left;
+      shape-outside: border-box;
+      shape-margin: 0.8rem;
+    }
+  }
+}

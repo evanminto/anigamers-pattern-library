@@ -1,0 +1,28 @@
+@import '../_base';
+
+$entry-hr-width: 0.1em;
+$entry-border-width: $entry-hr-width * 1.6;
+
+.entry {
+  padding: $space-md 0;
+
+  a {
+    &:focus,
+    &:hover {
+      img {
+        @include drop-shadow(1);
+      }
+    }
+  }
+
+  .entry-body,
+  .entry-footer {
+    a {
+      --inline-padding: 0.15ch;
+      padding-left: var(--inline-padding);
+      padding-right: var(--inline-padding);
+      margin-left: calc(var(--inline-padding) * -1);
+      margin-right: calc(var(--inline-padding) * -1);
+    }
+  }
+}

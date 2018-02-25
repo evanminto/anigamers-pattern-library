@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width">
 
     <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Oswald|Chau+Philomene+One|Open+Sans+Condensed:300'>
-    <link media="all" rel="stylesheet" href="{{ path '/css/settings.css' }}">
-    <link media="all" rel="stylesheet" href="{{ path '/css/generic.css' }}">
-    <link media="all" rel="stylesheet" href="{{ path '/css/elements.css' }}">
-    <link media="all" rel="stylesheet" href="{{ path '/css/atoms.css' }}">
-    <link media="all" rel="stylesheet" href="{{ path '/css/molecules.css' }}">
-    <link media="all" rel="stylesheet" href="{{ path '/css/organisms.css' }}">
+
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/elements.css' }}">
+
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/atoms/content.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/atoms/skip-to-main-content-link.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/atoms/svg-icon.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/atoms/logo.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/atoms/wrapper-link.css' }}">
+
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/author-bio.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/author-bio-list.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/site-sections.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/meta-links.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/page-links.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/main-menu.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/simple-text-form.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/header-search-form.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/suggested-entry.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/suggested-entries.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/topic-info.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/entry_body.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/entry-comments.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/entry-footer.css' }}">
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/molecules/entry-header.css' }}">
+
+    <link media="all" rel="stylesheet" href="{{ path '/css/real_site/organisms/entry.css' }}">
+
+    {{#each _target.context.css}}
+      <link media="{{this.media}}" rel="stylesheet" href="{{path this.src}}">
+    {{/each}}
 
     <script src="{{ path '/js/flexible-image.js' }}" defer></script>
     <script src="{{ path '/js/site-header.js' }}" defer></script>
@@ -22,8 +46,6 @@
     {{{ yield }}}
 
     <noscript id="deferred-styles">
-      <link media="all" rel="stylesheet" href="{{ path '/css/templates.css' }}">
-      <link media="all" rel="stylesheet" href="{{ path '/css/collages.css' }}">
       {{#if _target.context.themeFile}}<link media="all" rel="stylesheet" href="{{ _target.context.themeFile }}">{{/if}}
     </noscript>
 

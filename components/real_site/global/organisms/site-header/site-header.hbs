@@ -1,0 +1,23 @@
+<header id="site_header" class="site-header">
+  <div class="content">
+    {{render '@logo'}}
+
+    <a id="main_menu_link" class="menu-label wrapper-link main-menu-link js-main-menu-link" href="#main_menu" aria-controls="main_menu" aria-expanded="false">
+      <svg viewBox="0 0 120 120">
+        <use xlink:href="/images/icons.svg#icon_hamburger"></use>
+        <title>Main Menu</title>
+      </svg>
+    </a>
+
+    {{render '@main-menu'}}
+
+    <a id="header_search_link" class="wrapper-link header-search-link js-header-search-link" href="#header_search_form" aria-controls="header_search_form" aria-expanded="false">
+      <svg class="svg-icon -with-stroke" viewBox="0 0 120 120" width="30" aria-label="Search">
+        <use xlink:href="/images/icons.svg#icon_magnifying_glass"></use>
+        <title>Search</title>
+      </svg>
+    </a>
+
+    {{render '@header-search-form'}}
+  </div>
+</header>

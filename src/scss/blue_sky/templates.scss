@@ -1,0 +1,165 @@
+@import 'base';
+@import 'tools';
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  padding-top: 0;
+
+  &[class=""] {
+    padding-top: 0;
+    display: block;
+  }
+}
+
+@include sm-tall-screen {
+  body {
+    padding-top: 3.5em;
+  }
+}
+
+main > .inner {
+  max-width: 66ch;
+}
+
+@include sm-screen {
+  body {
+    padding-top: 3em;
+  }
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+}
+
+/* Home Page */
+
+.home-page {
+  main > .inner {
+    max-width: 78rem;
+
+    text-align: center;
+  }
+
+  .entry-preview-list {
+    text-align: left;
+  }
+
+  .columns-showcase {
+    margin-top: 3rem;
+  }
+}
+
+/* Entry Page */
+
+.entry-page main > .inner {
+  max-width: 66ch;
+}
+
+@include sm-screen {
+  :root {
+    --font-scale: 1.25;
+  }
+
+  /* Home Page */
+
+  .home-page .entry-preview-list > :first-child .entry-preview > a {
+    padding-top: 12em;
+  }
+
+  /* Entry Page */
+
+  .entry-page {
+    .summary--staff {
+      @include clearfix;
+
+      max-width: 45em;
+      text-align: left;
+
+      p {
+        padding-left: 3.75em;
+      }
+
+      .flexible-image {
+        float: left;
+        margin-bottom: 1.5em;
+        margin-right: 1.5em;
+
+        shape-outside: border-box;
+        shape-margin: 1.5em;
+      }
+    }
+
+    .entry-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.75em;
+
+      h1,
+      p {
+        grid-column: auto / span 2;
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    /* Entry Page */
+
+    .entry-page {
+      .entry-header > * {
+        margin: 0;
+      }
+
+      .entry-timestamp {
+        text-align: right;
+      }
+    }
+  }
+
+  /* Entry Search Page */
+
+  .entry-search-page {
+    .entry-search-results-list {
+      margin-top: 3rem;
+    }
+
+    .summary--entry-search-result .flexible-image {
+      width: 9em;
+      height: 9em;
+    }
+  }
+
+  /* Entry Archive Page */
+
+  .entry-archive-page .entry-search-results-list {
+    margin-top: 3rem;
+  }
+
+  /* Staff Page */
+
+  .staff-page .staff-list {
+    margin-top: 3rem;
+  }
+}
+
+@include md-screen {
+  /* Home Page */
+
+  .home-page .entry-preview-list > :first-child .summary {
+    padding-top: 18em;
+  }
+}
+
+@include xl-screen {
+  /* Home Page */
+
+  .home-page .entry-preview-list > :first-child .summary {
+    padding-top: 24em;
+  }
+}

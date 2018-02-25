@@ -1,0 +1,20 @@
+.simple-text-form {
+  align-items: center;
+  display: block;
+  display: flex;
+
+  > * {
+    float: left;
+
+    + * {
+      margin-left: 0.8rem;
+    }
+  }
+
+  &::after {
+    content: '';
+    clear: both;
+    overflow: hidden;
+    display: table;
+  }
+}

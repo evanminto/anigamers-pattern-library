@@ -1,0 +1,13 @@
+@import '_base';
+
+body {
+  > .content {
+    max-width: none;
+    padding: 0 2.63158%;
+    width: 100%;
+
+    background: $secondary-base-color;
+
+    @include drop-shadow;
+  }
+}

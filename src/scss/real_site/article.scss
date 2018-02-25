@@ -1,0 +1,12 @@
+@import '_base';
+
+main > .content {
+  margin-top: 0;
+  background: $secondary-base-color;
+}
+
+@media (print) {
+  .suggested-entries {
+    display: none;
+  }
+}
