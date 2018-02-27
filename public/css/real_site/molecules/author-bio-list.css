@@ -1,9 +1,0 @@
-.author-bio-list {
-  list-style: none;
-  padding: 0; }
-  .author-bio-list * {
-    margin: 0; }
-    .author-bio-list * + * {
-      margin-top: 0.8rem; }
-  .author-bio-list > * + * {
-    margin-top: 1.6rem; }

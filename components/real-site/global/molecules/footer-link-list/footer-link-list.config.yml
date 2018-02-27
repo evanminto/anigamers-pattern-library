@@ -1,0 +1,9 @@
+title: Footer Link List
+context:
+  links:
+    -
+      name: About
+      title: A basic description of our goals and purposes
+    -
+      name: Contact
+      title: Send us a comment, question, suggestion, or news tip

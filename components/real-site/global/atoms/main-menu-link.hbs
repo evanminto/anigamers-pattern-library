@@ -1,0 +1,14 @@
+<a
+  {{#if mainMenuLink.id}}id="{{mainMenuLink.id}}"{{/if}}
+  class="wrapper-link menu-label main-menu-link js-main-menu-link"
+  href="#{{mainMenuLink.controlsId}}"
+  {{#if mainMenuLink.controlsId}}
+    aria-controls="{{mainMenuLink.controlsId}}"
+    aria-expanded="false"
+  {{/if}}
+>
+  <svg class="svg-icon -with-stroke" viewBox="0 0 120 120" height="16" aria-label="Main Menu">
+    <use xlink:href="/images/icons.svg#icon_hamburger"></use>
+    <title>Main Menu</title>
+  </svg>
+</a>

@@ -1,0 +1,15 @@
+<header class="entry-header">
+  {{#if showSubtitle}}
+    {{render '@entry-titles'}}
+  {{else}}
+    {{render '@entry-titles--no-subtitle'}}
+  {{/if}}
+
+  {{#if showByline}}
+    {{render '@entry-byline--with-list'}}
+  {{/if}}
+
+  {{#if showTimestamp}}
+    {{render '@entry-timestamp'}}
+  {{/if}}
+</header>

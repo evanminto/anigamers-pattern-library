@@ -1,0 +1,9 @@
+title: Entry Titles
+context:
+  title: Yuri!!! on Ice Staff Discuss Sayo Yamamoto and Skating Animation
+  subtitle: Lorem ipsum dolor sit amet.
+variants:
+  -
+    name: No Subtitle
+    context:
+      subtitle: false

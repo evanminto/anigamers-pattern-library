@@ -1,0 +1,100 @@
+title: Home Page
+context:
+  css:
+    -
+      src: /css/real_site/beta.css
+      media: all
+    -
+      src: /css/real_site/header.css
+      media: all
+    -
+      src: /css/real_site/footer.css
+      media: all
+    -
+      src: /css/real_site/beta-medium.css
+      media: "(min-width: 53.75em)"
+    -
+      src: /css/real_site/header-large.css
+      media: "(min-width: 60em)"
+    -
+      src: /css/real_site/index.css
+      media: all
+  entries:
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg

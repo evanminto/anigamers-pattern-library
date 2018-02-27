@@ -1,0 +1,80 @@
+<div class="content">
+  <a href="#main_content" class="skip-to-main-content-link js-skip-to-main-content">Skip to main content</a>
+
+  {{render '@site-header'}}
+
+  <main id="main_content">
+    <div class="content">
+      <ul class="entries first-page">
+        {{#each entries}}
+          <li>
+            <article class="entry">
+              <a href="">
+                <img alt="" aria-hidden="true" src="{{thumbnailSmall}}" class="thumbnail" data-src="{{thumbnailLarge}}">
+
+                <div class="metadata">
+                  <div class="metadata-inner">
+                    <header>
+                      <h1>{{title}}</h1>
+                    </header>
+
+                    <div class="authors">
+                      <span>By</span> {{authors}}
+                    </div>
+
+                    <p class="publication-date">
+                      <time>{{timestamp}}</time>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        {{/each}}
+
+        <li class="columns-catalog">
+          <aside>
+            <h1 class="columns-section-title">Columns</h1>
+
+            <ul class="columns">
+              <li class="column">
+                <section>
+                  <a href="/snapshots">
+                    <img alt="" src="/uploads/thumbnails/small_WakakoZakeEp9NegaPshuuu_20150922004039.jpg" data-src="/uploads/entries/WakakoZakeEp9NegaPshuuu_20150922004039.jpg">
+                    <h1>Snap<wbr>shots</h1>
+                  </a>
+                </section>
+              </li>
+
+              <li class="column">
+                <section>
+                  <a href="/termina-travelogue">
+                    <img alt="" src="/uploads/thumbnails/small_Link_Waiting_20150619184058.jpg" data-src="/uploads/entries/Link_Waiting_20150619184058.png">
+                    <h1>Termina <wbr>Travelogue</h1>
+                  </a>
+                </section>
+              </li>
+
+              <li class="column">
+                <section>
+                  <a href="/three-episode-test">
+                    <img alt="" src="/uploads/thumbnails/small_Food_Wars_1_20150803221401.jpg" data-src="/uploads/entries/Food_Wars_1_20150803221401.jpg">
+                    <h1>Three-<wbr>Episode <wbr>Test</h1>
+                  </a>
+                </section>
+              </li>
+            </ul>
+          </aside>
+        </li>
+      </ul>
+
+      {{render '@page-links'}}
+    </div>
+  </main>
+
+  <aside class="site-content-navigation">
+
+  </aside>
+
+  {{render '@site-footer'}}
+</div>

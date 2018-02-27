@@ -1,0 +1,12 @@
+title: Entry Header
+context:
+  showByline: true
+  showSubtitle: true
+  showTimestamp: true
+variants:
+  -
+    name: Title Only
+    context:
+      showByline: false
+      showSubtitle: false
+      showTimestamp: false

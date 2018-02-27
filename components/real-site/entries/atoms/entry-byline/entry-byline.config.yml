@@ -1,0 +1,24 @@
+title: Entry Byline
+context:
+  authors:
+    - Evan Minto
+    - Ink
+    - David Estrella
+  useLinks: true
+  useList: false
+variants:
+  -
+    name: Without Links
+    context:
+      useLinks: false
+  -
+    name: With List
+    context:
+      class: -with-list
+      useList: true
+  -
+    name: With List Without Links
+    context:
+      class: -with-list
+      useList: true
+      useLinks: false

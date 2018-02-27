@@ -19,11 +19,6 @@
     }
   }
 
-  address,
-  .authors {
-    display: inline;
-  }
-
   .authors {
     @include comma-list(true);
   }
@@ -54,7 +49,8 @@
     font-weight: normal;
   }
 
-  .byline {
+  .entry-byline {
+    display: block;
     margin-bottom: 0.3em;
   }
 }

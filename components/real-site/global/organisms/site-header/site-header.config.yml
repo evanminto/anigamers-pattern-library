@@ -1,0 +1,18 @@
+title: Site Header
+context:
+  css:
+    -
+      src: /css/real_site/beta.css
+      media: all
+    -
+      src: /css/real_site/header.css
+      media: all
+    -
+      src: /css/real_site/header-large.css
+      media: "(min-width: 60em)"
+  headerSearchLink:
+    id: header_search_link
+    controlsId: header_search_form
+  mainMenuLink:
+    id: main_menu_link
+    controlsId: main_menu

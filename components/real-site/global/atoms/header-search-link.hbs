@@ -1,0 +1,14 @@
+<a
+  {{#if headerSearchLink.id}}id="{{headerSearchLink.id}}"{{/if}}
+  class="wrapper-link header-search-link js-header-search-link"
+  href="#{{headerSearchLink.controlsId}}"
+  {{#if headerSearchLink.controlsId}}
+    aria-controls="{{headerSearchLink.controlsId}}"
+    aria-expanded="false"
+  {{/if}}
+>
+  <svg class="svg-icon -with-stroke" viewBox="0 0 120 120" height="16" aria-label="Search">
+    <use xlink:href="/images/icons.svg#icon_magnifying_glass"></use>
+    <title>Search</title>
+  </svg>
+</a>

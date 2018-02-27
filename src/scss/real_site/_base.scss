@@ -258,7 +258,7 @@ $box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
     display: none;
   }
 
-  .publication-date {
+  .entry-timestamp {
     margin-top: 1em;
     font-size: $font-size-xxs;
     color: $secondary-dark-color;
@@ -283,7 +283,7 @@ $box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
       font-size: $font-size-sm;
     }
 
-    .publication-date {
+    .entry-timestamp {
       font-size: $font-size-xs;
     }
   }
@@ -307,7 +307,7 @@ $box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
       font-size: $font-size-md;
     }
 
-    .publication-date {
+    .entry-timestamp {
       font-size: $font-size-sm;
     }
   }
@@ -383,7 +383,7 @@ $box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
     }
 
     .authors,
-    .publication-date,
+    .entry-timestamp,
     .topics {
       display: block;
     }

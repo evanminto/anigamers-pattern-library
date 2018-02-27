@@ -1,0 +1,37 @@
+@import '../_base';
+
+%entry-heading {
+  @include heading-font;
+
+  font-weight: normal;
+}
+
+.entry-titles {
+  .title {
+    @extend %entry-heading;
+
+    margin-bottom: 0;
+    font-size: $font-size-xl;
+    line-height: 1.365333333333333;
+
+    a {
+      padding: 0;
+
+      color: $nihon-red;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        background: none;
+        color: $primary-dark-color;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: 0.2em;
+
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+}

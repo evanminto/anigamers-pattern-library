@@ -1,0 +1,14 @@
+title: Entry
+context:
+  organismsCss:
+    -
+      src: /css/real_site/organisms/entry.css
+      media: all
+  header_title_only: false
+  show_footer: true
+variants:
+  -
+    name: Simple
+    context:
+      header_title_only: true
+      show_footer: false

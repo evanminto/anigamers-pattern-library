@@ -1,0 +1,15 @@
+@import '../_base';
+
+.entry-byline {
+  font-style: normal;
+
+  &.-with-list {
+    flex: 0 1 auto;
+
+    ul {
+      @include comma-list(true);
+
+      display: inline;
+    }
+  }
+}

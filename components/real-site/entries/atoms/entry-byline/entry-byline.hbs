@@ -1,0 +1,15 @@
+
+<address id="entry_byline" class="entry-byline {{class}}">
+  By
+  {{#if useList}}
+    <ul>
+      {{#each authors}}
+        <li>{{#if ../useLinks}}<a href="" rel="author">{{/if}}{{this}}{{#if ../useLinks}}</a>{{/if}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    {{#each authors}}
+      {{#if @last}}and {{/if}}{{#if ../useLinks}}<a href="" rel="author">{{/if}}{{this}}{{#if ../useLinks}}</a>{{/if}}{{#unless @last}},{{/unless}}
+    {{/each}}
+  {{/if}}
+</address>

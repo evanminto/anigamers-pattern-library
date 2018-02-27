@@ -1,0 +1,17 @@
+<article class="entry">
+  <div class="content">
+    {{#if header_title_only}}
+      {{render '@entry-header--title-only'}}
+    {{else}}
+      {{render '@entry-header'}}
+    {{/if}}
+
+    {{render '@entry-body'}}
+
+    {{#if show_footer}}
+      {{render '@entry-footer'}}
+      {{render '@suggested-entries'}}
+      {{render '@entry-comments'}}
+    {{/if}}
+  </div>
+</article>
