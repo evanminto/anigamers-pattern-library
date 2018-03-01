@@ -1,5 +1,9 @@
 title: Article
 context:
+  organismsCss:
+    -
+      src: /css/real_site/organisms/entry.css
+      media: all
   css:
     -
       src: /css/real_site/beta.css

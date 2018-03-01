@@ -1,0 +1,49 @@
+@import '../_base';
+
+%entry-heading {
+  @include heading-font;
+
+  font-weight: normal;
+}
+
+.sidebar {
+  @include drop-shadow;
+
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  float: right;
+  margin: 1em 0;
+  border-radius: $border-radius;
+  padding: gridsystem-gutter-width();
+  background: $blood-red;
+  color: $off-white;
+  font-size: $font-size-xs;
+
+  h1 {
+    @extend %entry-heading;
+    font-size: $font-size-sm;
+  }
+
+  img {
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  a {
+    color: $light-red;
+
+    &:hover {
+      background: $off-white;
+      color: $blood-red;
+    }
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

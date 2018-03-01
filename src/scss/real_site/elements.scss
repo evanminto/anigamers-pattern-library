@@ -103,6 +103,8 @@ p {
 
 img {
   border: none;
+  object-fit: cover;
+  object-position: center center;
 }
 
 :-o-prefocus,
@@ -235,4 +237,28 @@ button {
 
 main {
   margin-bottom: 1rem;
+}
+
+figure {
+  margin: 1em auto;
+
+  text-align: center;
+
+  img,
+  video,
+  audio,
+  object {
+    margin: 0 auto 0.5em auto;
+  }
+
+  figcaption {
+    font-size: $font-size-xs;
+    font-style: italic;
+
+    cite,
+    em,
+    i {
+      font-style: normal;
+    }
+  }
 }

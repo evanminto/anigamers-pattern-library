@@ -1,0 +1,10 @@
+@import '../_base';
+
+.column-note {
+  font-size: $font-size-xs;
+  font-style: italic;
+
+  cite {
+    font-style: normal;
+  }
+}

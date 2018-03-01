@@ -1,0 +1,14 @@
+@import '../_base';
+
+.podcast-player {
+  display: block;
+  margin: 1em 0 0 0;
+
+  &::-webkit-media-controls-panel {
+    @include drop-shadow;
+  }
+
+  &::-webkit-media-controls-panel:hover {
+    @include drop-shadow(1);
+  }
+}

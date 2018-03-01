@@ -1,0 +1,20 @@
+@import '../_base';
+
+$entry-hr-width: 0.1em;
+$entry-border-width: $entry-hr-width * 1.6;
+
+.pull-quote-2017 {
+  @include emphasis-font;
+  @include text-drop-shadow;
+
+  display: block;
+  margin: 1em 0;
+
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+
+  color: $blood-red;
+  border: 0 solid currentColor;
+}

@@ -1,0 +1,30 @@
+@import '../_base';
+
+.image-pair {
+  --side-by-side: 0;
+  display: grid;
+  grid-template-columns: repeat(calc(1 + var(--side-by-side)), 1fr);
+  grid-gap: 1em;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  * + img {
+    margin-top: 1em;
+
+    @supports (display: grid) {
+      margin-top: 0;
+    }
+  }
+
+  figcaption {
+    grid-column-end: span calc(1 + var(--side-by-side));
+    margin-top: 1em;
+
+    @supports (display: grid) {
+      margin-top: 0;
+    }
+  }
+}

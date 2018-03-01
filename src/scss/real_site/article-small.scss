@@ -112,6 +112,10 @@ $entry-border-width: $entry-hr-width * 1.6;
       }
     }
   }
+
+  .image-pair {
+    --side-by-side: 1;
+  }
 }
 
 @include medium-screen {
@@ -159,10 +163,6 @@ $entry-border-width: $entry-hr-width * 1.6;
       &.type-minor-alt {
         margin: 0 gridsystem-gutter-width(10) gridsystem-gutter-width(10) 0;
       }
-    }
-
-    .image-pair {
-      column-gap: gridsystem-gutter-width(10) / 2;
     }
 
     .sidebar {

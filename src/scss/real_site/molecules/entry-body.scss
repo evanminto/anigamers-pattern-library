@@ -14,12 +14,6 @@ $entry-border-width: $entry-hr-width * 1.6;
   font-size: $font-size-sm;
   line-height: 1.6;
 
-  ul {
-    margin-left: 1.5em;
-
-    list-style: disc;
-  }
-
   h2,
   h3,
   h4 {
@@ -50,20 +44,17 @@ $entry-border-width: $entry-hr-width * 1.6;
     margin: 0.85em 0;
   }
 
+  ul {
+    margin-left: 1.5em;
+
+    list-style: disc;
+  }
+
   hr {
     margin: 2em 0;
 
     border: $entry-hr-width solid $blood-red;
     border-radius: $entry-hr-width;
-  }
-
-  .column-note {
-    font-size: $font-size-xs;
-    font-style: italic;
-
-    cite {
-      font-style: normal;
-    }
   }
 
   img {
@@ -75,12 +66,6 @@ $entry-border-width: $entry-hr-width * 1.6;
     margin: 1em auto;
     border-radius: $border-radius;
 
-    &.noborder {
-      margin: 0;
-
-      box-shadow: none;
-    }
-
     &[src='http://files.anigamers.com-a.googlepages.com/star.gif'],
     &[src='http://files.anigamers.com-a.googlepages.com/star-half.gif'],
     &[src='http://files.anigamers.com-a.googlepages.com/star-open.gif'] {
@@ -88,132 +73,6 @@ $entry-border-width: $entry-hr-width * 1.6;
 
       box-shadow: none;
     }
-  }
-
-  figure {
-    margin: 1em auto;
-
-    text-align: center;
-
-    img,
-    video,
-    audio,
-    object {
-      margin: 0 auto 0.5em auto;
-    }
-
-    figcaption {
-      font-size: $font-size-xs;
-      font-style: italic;
-
-      cite,
-      em,
-      i {
-        font-style: normal;
-      }
-    }
-  }
-
-  .image-pair {
-    columns: 2 15.84375rem;
-    column-gap: gridsystem-gutter-width() / 2;
-
-    figcaption {
-      column-span: all;
-    }
-
-    @supports not (column-span: all) {
-      columns: auto;
-    }
-  }
-
-  .sidebar {
-    @include drop-shadow;
-
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    float: right;
-    margin: 1em 0;
-    border-radius: $border-radius;
-    padding: gridsystem-gutter-width();
-    background: $blood-red;
-    color: $off-white;
-    font-size: $font-size-xs;
-
-    h1 {
-      @extend %entry-heading;
-      font-size: $font-size-sm;
-    }
-
-    img {
-      box-shadow: none;
-    }
-
-    a {
-      color: $light-red;
-
-      &:hover {
-        background: $off-white;
-        color: $blood-red;
-      }
-    }
-
-    :first-child {
-      margin-top: 0;
-    }
-
-    :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  p.pull-quoted {
-    &::before {
-      @include emphasis-font;
-      @include text-drop-shadow;
-
-      content: attr(data-ag-pull-quote);
-      display: block;
-      padding: 0 0.4em;
-      text-align: center;
-      font-size: $font-size-lg;
-      font-weight: bold;
-      margin: 1em 0;
-      color: $blood-red;
-      border: 0 solid $nihon-red;
-    }
-
-    &.type-start::before {
-      border-width: $entry-border-width 0 0 0;
-      padding: 0.4em 0 0 0;
-    }
-
-    &.type-end::before {
-      border-width: 0 0 $entry-border-width 0;
-      padding: 0 0 0.4em 0;
-    }
-
-    &.type-emphasize::before {
-      border-width: $entry-border-width 0;
-      padding: 0.4em 0;
-    }
-  }
-
-  .pull-quote-2017 {
-    @include emphasis-font;
-    @include text-drop-shadow;
-
-    display: block;
-    margin: 1em 0;
-
-    font-size: 1.75em;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center;
-
-    color: $blood-red;
-    border: 0 solid currentColor;
   }
 
   audio {
@@ -243,66 +102,17 @@ $entry-border-width: $entry-hr-width * 1.6;
     width: auto;
   }
 
-  .intro-blurb {
-    font-size: 0.8em;
-  }
-
-  .interview-intro-blurb {
-    font-style: italic;
-
-    i,
-    em,
-    cite {
-      font-style: normal;
-    }
-  }
-
-  .availability-blurb {
-    font-style: italic;
-
-    cite {
-      font-style: normal;
-    }
-  }
-
-  .podcast-media-info {
-    p {
-      margin: 0.5em 0;
-    }
-  }
-
-  .podcast-player {
-    display: block;
-    margin: 1em 0 0 0;
-
-    &::-webkit-media-controls-panel {
-      @include drop-shadow;
+  .image-pair {
+    img {
+      margin: 0;
     }
 
-    &::-webkit-media-controls-panel:hover {
-      @include drop-shadow(1);
+    * + img {
+      margin-top: 1em;
+
+      @supports (display: grid) {
+        margin-top: 0;
+      }
     }
-  }
-
-  .podcast-episode-list {
-    th {
-      text-align: left;
-    }
-
-    th,
-    td {
-      padding: 0.5em;
-    }
-  }
-
-  .review-rating {
-    font-size: 1.333em;
-    font-weight: bold;
-    color: $blood-red;
-    text-align: center;
-  }
-
-  .review-version {
-    font-style: italic;
   }
 }
