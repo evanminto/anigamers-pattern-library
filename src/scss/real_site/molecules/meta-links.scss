@@ -1,8 +1,11 @@
 @import '../_base';
 
 .meta-links {
+  @include clear-spacing;
+
   display: flex;
   width: 100%;
+  list-style: none;
 
   li {
     margin-right: gridsystem-gutter-width();

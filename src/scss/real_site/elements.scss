@@ -87,12 +87,6 @@ i cite {
     font-style: normal;
 }
 
-ul {
-  @include clear-spacing;
-
-  list-style: none;
-}
-
 p {
   @include block-center;
 
@@ -165,6 +159,8 @@ h3,
 h4,
 h5,
 h6 {
+  @include heading-font;
+
   margin: 0 0 $vertical-rhythm 0;
 }
 
@@ -249,16 +245,24 @@ figure {
   audio,
   object {
     margin: 0 auto 0.5em auto;
+    max-width: 100%;
   }
+}
 
-  figcaption {
-    font-size: $font-size-xs;
-    font-style: italic;
+figcaption {
+  font-size: $font-size-xs;
+  font-style: italic;
 
-    cite,
-    em,
-    i {
-      font-style: normal;
-    }
+  cite,
+  em,
+  i {
+    font-style: normal;
   }
+}
+
+hr {
+  margin: 2em 0;
+
+  border: $entry-hr-width solid $blood-red;
+  border-radius: $entry-hr-width;
 }

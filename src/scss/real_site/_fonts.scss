@@ -28,6 +28,7 @@ $line-height-xs: $vertical-rhythm / $font-size-xs;
 
 @mixin heading-font {
   font-family: Oswald, Verdana, sans-serif;
+  font-weight: normal;
 }
 
 @mixin emphasis-font {

@@ -1,11 +1,5 @@
 @import '../_base';
 
-%entry-heading {
-  @include heading-font;
-
-  font-weight: normal;
-}
-
 .topic-info {
   > * {
     margin: 0;
@@ -16,14 +10,15 @@
   }
 
   h2 {
-    @extend %entry-heading;
-
     font-size: $font-size-lg;
   }
 
   .topics {
+    @include clear-spacing;
+
     font-size: $font-size-sm;
     line-height: $line-height-sm;
+    list-style: none;
 
     > * {
       display: inline;

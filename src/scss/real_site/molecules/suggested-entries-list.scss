@@ -1,12 +1,11 @@
 @import '../_base';
 
-.footer-link-list {
+.suggested-entries-list {
   @include clear-spacing;
 
   list-style: none;
 
-  li {
-    margin: 0.5em 0;
-    line-height: 1.2;
+  > * {
+    margin-bottom: 1.5rem;
   }
 }

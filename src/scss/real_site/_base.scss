@@ -25,6 +25,9 @@ $menu-icon-size: 1.5 * $header-icon-size;
 $box-shadow-1: 0 0.0625rem 0.125rem $box-shadow-color;
 $box-shadow-2: 0 0.125rem 0.1875rem $box-shadow-color;
 
+$entry-hr-width: 0.1em;
+$entry-border-width: $entry-hr-width * 1.6;
+
 // For some reason this isn't working in Compass.
 @mixin input-placeholder {
   &::-webkit-input-placeholder {

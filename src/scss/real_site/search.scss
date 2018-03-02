@@ -34,7 +34,10 @@ main {
 }
 
 .entries {
+  @include clear-spacing;
+
   margin: 1.5rem 0 0 0;
+  list-style: none;
 
   > li {
     @include list-entry;

@@ -21,7 +21,9 @@
   }
 
   h1 {
+    font-family: inherit;
     font-size: $font-size-sm;
+    font-weight: bolder;
     margin: 0 0 0.5em 0;
   }
 }

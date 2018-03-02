@@ -1,11 +1,5 @@
 @import '../_base';
 
-%entry-heading {
-  @include heading-font;
-
-  font-weight: normal;
-}
-
 .sidebar {
   @include drop-shadow;
 
@@ -21,7 +15,6 @@
   font-size: $font-size-xs;
 
   h1 {
-    @extend %entry-heading;
     font-size: $font-size-sm;
   }
 

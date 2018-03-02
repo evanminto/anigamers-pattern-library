@@ -1,8 +1,10 @@
 @import '../_base';
 
 .site-sections {
+  @include clear-spacing;
   display: flex;
   font-size: 1rem;
+  list-style: none;
 
   a {
     color: $primary-color;

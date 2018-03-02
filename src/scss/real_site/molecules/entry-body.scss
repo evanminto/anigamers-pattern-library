@@ -1,14 +1,5 @@
 @import '../_base';
 
-$entry-hr-width: 0.1em;
-$entry-border-width: $entry-hr-width * 1.6;
-
-%entry-heading {
-  @include heading-font;
-
-  font-weight: normal;
-}
-
 .entry-body {
   margin: 1rem auto 0 auto;
   font-size: $font-size-sm;
@@ -17,8 +8,6 @@ $entry-border-width: $entry-hr-width * 1.6;
   h2,
   h3,
   h4 {
-    @extend %entry-heading;
-
     margin-bottom: 0.5em;
 
     color: $blood-red;
@@ -48,13 +37,6 @@ $entry-border-width: $entry-hr-width * 1.6;
     margin-left: 1.5em;
 
     list-style: disc;
-  }
-
-  hr {
-    margin: 2em 0;
-
-    border: $entry-hr-width solid $blood-red;
-    border-radius: $entry-hr-width;
   }
 
   img {

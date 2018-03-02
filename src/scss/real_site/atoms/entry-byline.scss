@@ -7,9 +7,11 @@
     flex: 0 1 auto;
 
     ul {
+      @include clear-spacing;
       @include comma-list(true);
 
       display: inline;
+      list-style: none;
     }
   }
 }

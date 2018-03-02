@@ -1,15 +1,7 @@
 @import '../_base';
 
-%entry-heading {
-  @include heading-font;
-
-  font-weight: normal;
-}
-
 .entry-titles {
   .title {
-    @extend %entry-heading;
-
     margin-bottom: 0;
     font-size: $font-size-xl;
     line-height: 1.365333333333333;
