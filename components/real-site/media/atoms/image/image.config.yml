@@ -1,3 +1,9 @@
 title: Image
 context:
   src: //placehold.it/1280x800
+variants:
+  -
+    name: No Border
+    context:
+      class: noborder
+      link: true
