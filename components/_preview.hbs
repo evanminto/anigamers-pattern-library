@@ -53,6 +53,15 @@
       <link media="{{this.media}}" rel="stylesheet" href="{{path this.src}}">
     {{/each}}
 
+    {{#unless _target.context.css}}
+      <style>
+        body {
+          box-sizing: border-box;
+          padding: 1em;
+        }
+      </style>
+    {{/unless}}
+
     {{#each _target.context.css}}
       <link media="{{this.media}}" rel="stylesheet" href="{{path this.src}}">
     {{/each}}

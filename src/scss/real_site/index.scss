@@ -1,7 +1,8 @@
 @import '_base';
 
-body > .content {
-  padding: 0;
+body {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .entries {
@@ -317,8 +318,9 @@ body > .content {
 }
 
 @include large-screen {
-  body > .content {
-    margin: 0 2.63158%;
+  body {
+    padding-left: 2.63158%;
+    padding-right: 2.63158%;
   }
 
   .entries {
