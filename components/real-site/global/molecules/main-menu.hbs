@@ -1,0 +1,13 @@
+<div id="{{mainMenu.id}}" class="menu main-menu" tabindex="-1">
+  <nav>
+    {{render '@site-sections'}}
+  </nav>
+
+  {{render '@meta-links'}}
+
+  <a
+    class="main-menu-close-link js-main-menu-close-link"
+    href="#{{mainMenu.closeControlsId}}"
+    aria-controls="{{mainMenu.closeControlsId}}"
+  >Close Menu</a>
+</div>

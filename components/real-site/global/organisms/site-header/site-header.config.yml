@@ -10,9 +10,14 @@ context:
     -
       src: /css/real_site/header-large.css
       media: "(min-width: 60em)"
+  headerSearchForm:
+    closeControlsId: header_search_link
   headerSearchLink:
     id: header_search_link
     controlsId: header_search_form
+  mainMenu:
+    id: main_menu
+    closeControlsId: main_menu_link
   mainMenuLink:
     id: main_menu_link
     controlsId: main_menu
