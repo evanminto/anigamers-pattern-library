@@ -2,16 +2,16 @@
 
 .suggested-entry {
   > .wrapper-link {
-    color: $nihon-red;
+    color: $color-primary;
 
     &:visited {
-      color: $blood-red;
+      color: $color-primary-dark;
     }
 
     &:active,
     &:focus,
     &:hover {
-      color: $blood-red;
+      color: $color-primary-dark;
 
       .thumbnail {
         @include drop-shadow(1);
@@ -26,8 +26,8 @@
   .thumbnail {
     @include drop-shadow;
 
-    height: 12rem;
-    margin-bottom: 0.2rem;
+    height: 7.5 * $vertical-rhythm;
+    margin-bottom: $space-xxs;
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -43,7 +43,7 @@
   .title {
     @include heading-font;
 
-    margin-bottom: 0.2em;
+    margin-bottom: $space-xxs-relative;
 
     font-size: $font-size-md;
     font-weight: normal;
@@ -51,6 +51,6 @@
 
   .entry-byline {
     display: block;
-    margin-bottom: 0.3em;
+    margin-bottom: $space-xs-relative;
   }
 }

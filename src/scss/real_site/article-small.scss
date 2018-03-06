@@ -1,8 +1,5 @@
 @import '_base';
 
-$entry-hr-width: 0.1em;
-$entry-border-width: $entry-hr-width * 1.6;
-
 .suggested-entries-list {
   display: flex;
   flex-wrap: wrap;
@@ -101,13 +98,13 @@ $entry-border-width: $entry-hr-width * 1.6;
 
       &.type-minor::before {
         border-width: $entry-border-width $entry-border-width 0 0;
-        padding: 0.4em;
+        padding: $space-xs-relative;
         border-radius: 0 $border-radius 0 0;
       }
 
       &.type-minor-alt::before {
         border-width: $entry-border-width 0 0 $entry-border-width;
-        padding: 0.4em;
+        padding: $space-xs-relative;
         border-radius: $border-radius 0 0 0;
       }
     }
@@ -131,7 +128,7 @@ $entry-border-width: $entry-hr-width * 1.6;
     @include column(10);
 
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: $space-md 0;
   }
 
   .entry-body {
@@ -290,7 +287,7 @@ $entry-border-width: $entry-hr-width * 1.6;
 
     .title {
       font-size: $font-size-xxl;
-      line-height: 1.310717986737172;
+      line-height: $line-height-xxl;
     }
 
     .subtitle {

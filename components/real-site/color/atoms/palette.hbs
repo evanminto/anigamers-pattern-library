@@ -1,0 +1,64 @@
+<ul class="palette">
+  <li class="color" style="--color: var(--color-primary); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-primary-dark); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-secondary); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-secondary-dark); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-gray-primary); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-gray-secondary); --text: white;">
+  </li>
+
+  <li class="color" style="--color: var(--color-off-black); --text: white;">
+  </li>
+</ul>
+
+<style>
+  body {
+    background: white;
+  }
+
+  .palette {
+    display: grid;
+    grid-auto-rows: 10rem;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, 10rem);
+    padding: 0;
+
+    font-size: var(--font-size-md);
+    list-style: none;
+  }
+
+  .color {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+    background: var(--color);
+    color: var(--text);
+  }
+
+  .color .name {
+    order: 1;
+    margin-top: auto;
+  }
+
+  .color .aa,
+  .color .aaa {
+    order: 0;
+    align-self: flex-end;
+
+    font-size: var(--font-size-sm);
+  }
+</style>

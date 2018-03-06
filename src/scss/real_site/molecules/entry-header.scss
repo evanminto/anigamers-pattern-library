@@ -1,8 +1,5 @@
 @import '../_base';
 
-$entry-hr-width: 0.1em;
-$entry-border-width: $entry-hr-width * 1.6;
-
 .entry-header {
   display: flex;
   flex-wrap: wrap;
@@ -11,12 +8,12 @@ $entry-border-width: $entry-hr-width * 1.6;
 
   .entry-titles {
     flex: 1 1 100%;
-    margin-bottom: 1rem;
+    margin-bottom: $space-sm;
   }
 
   .entry-byline {
     display: block;
-    margin: 0 2em 0.5em 0;
+    margin: 0 $space-md-relative $space-xs-relative 0;
   }
 
   .entry-timestamp {

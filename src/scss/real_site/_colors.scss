@@ -16,10 +16,25 @@
   @return mix(black, $color, $percentage);
 }
 
-$nihon-red: rgb(218, 51, 43);
-$blood-red: rgb(153, 34, 36);
-$sky-blue: rgb(43, 181, 193);
-$pacific-blue: rgb(12, 67, 101);
+$hue-primary: 3;
+$hue-secondary: $hue-primary + 180;
+$saturation-default: 70%;
+$saturation-high: 85%;
+$saturation-medium: 20%;
+$saturation-low: 7.5%;
+
+$color-primary: hsl($hue-primary, $saturation-default, 47.5%);
+$color-primary-dark: hsl($hue-primary, $saturation-high, 25%);
+$color-secondary: hsl($hue-secondary, $saturation-default, 30%);
+$color-secondary-dark: hsl($hue-secondary, $saturation-high, 20%);
+$color-gray-primary: hsl($hue-primary, $saturation-medium, 75%);
+$color-gray-secondary: hsl($hue-secondary, $saturation-low, 92.5%);
+$color-off-black: hsl($hue-secondary, $saturation-medium, 15%);
+
+$nihon-red: $color-primary;//rgb(218, 51, 43);
+$blood-red: $color-primary-dark;//rgb(153, 34, 36);
+$sky-blue: $color-secondary;//rgb(43, 181, 193);
+$pacific-blue: $color-secondary-dark;//rgb(12, 67, 101);
 
 $transparent-nihon-red: rgba($nihon-red, 0.5);
 $light-red: tint($blood-red, 40%);
@@ -33,13 +48,13 @@ $gray-blue: $yuurei-blue;
 // Semantic colors
 $primary-color: $nihon-red;
 $primary-dark-color: $blood-red;
-$primary-light-color: tint($primary-color, 20%);
+$primary-light-color: $color-gray-primary;//tint($primary-color, 20%);
 $secondary-color: $sky-blue;
 $secondary-dark-color: $pacific-blue;
-$secondary-light-color: tint($secondary-color, 20%);
-$base-color: desaturate(tint($secondary-color, 80%), 40%);
-$base-dark-color: desaturate(tint($secondary-dark-color, 70%), 40%);
-$secondary-base-color: tint($base-color, 95%);
+$secondary-light-color: $color-secondary;//tint($secondary-color, 20%);
+$base-color: $color-gray-secondary;//desaturate(tint($secondary-color, 80%), 40%);
+$base-dark-color: $color-off-black;//desaturate(tint($secondary-dark-color, 70%), 40%);
+$secondary-base-color: white;//tint($base-color, 95%);
 $secondary-base-dark-color: $base-color;
 
 // Third-party colors
@@ -47,5 +62,5 @@ $twitter-blue: rgb(85, 172, 238);
 $color-blue-facebook: #3b5998;
 $color-blue-twitter: #55acee;
 
-$box-shadow-color: rgba(darken($gray-blue, 75%), 0.3);
+$box-shadow-color: rgba($color-off-black, 0.3);//rgba(darken($gray-blue, 75%), 0.3);
 $text-shadow-color: transparentize($box-shadow-color, 0.15);

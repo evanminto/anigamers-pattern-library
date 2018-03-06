@@ -1,7 +1,7 @@
 @import '_base';
 
 main {
-  padding-top: 1.5rem;
+  padding-top: $space-md;
   padding-left: 2.63158%;
   padding-right: 2.63158%;
 }
@@ -29,16 +29,16 @@ main {
   }
 
   .svg-icon.-with-stroke {
-    height: 1.2em;
-    margin: 0 0.5em 0 0;
-    stroke-width: 1.2em;
+    height: $space-md-relative;
+    margin: 0 $space-xs-relative 0 0;
+    stroke-width: $space-md-relative;
   }
 }
 
 .entries {
   @include clear-spacing;
 
-  margin: 1.5rem 0 0 0;
+  margin: $space-md 0 0 0;
   list-style: none;
 
   > li {
@@ -47,7 +47,7 @@ main {
     margin: 0;
 
     + li {
-      margin-top: 1.5rem;
+      margin-top: $space-md;
     }
 
     .entry {

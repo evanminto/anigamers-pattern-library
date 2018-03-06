@@ -1,17 +1,19 @@
+@import '_base';
+
 .profile-page {
   .profile-info-box {
-    margin-top: 2rem;
+    margin-top: $space-md;
 
     clear: both;
 
     .name {
-      margin-right: 1em;
+      margin-right: $space-sm-relative;
 
       font-weight: bold;
     }
 
     .title {
-      margin-right: 1em;
+      margin-right: $space-sm-relative;
 
       font-style: italic;
     }
@@ -19,18 +21,18 @@
 
   .avatar {
     float: left;
-    margin-right: 1rem;
-    max-width: 5rem;
+    margin-right: $space-sm;
+    max-width: $space-lg;
 
     border-radius: 100%;
   }
 
   .profile-footer-box {
-    margin-top: 1rem;
+    margin-top: $space-sm;
   }
 
   .next-profile-page {
-    margin-top: 2rem;
+    margin-top: $space-md;
 
     font-weight: bold;
   }

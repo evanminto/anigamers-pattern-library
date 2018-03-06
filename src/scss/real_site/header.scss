@@ -11,7 +11,7 @@
   > svg {
     display: block;
     stroke: currentColor;
-    stroke-width: 15px;
+    stroke-width: $space-md;
   }
 }
 
@@ -19,19 +19,19 @@
   order: 0;
 
   .svg-icon {
-    height: 1.4rem;
+    height: $space-md;
   }
 }
 
 .main-menu-close-link {
-  margin-top: 1.5rem;
+  margin-top: $space-md;
 }
 
 .header-search-link {
   order: 2;
 
   .svg-icon {
-    height: 1.4rem;
+    height: $space-md;
   }
 }
 
@@ -39,15 +39,15 @@
 [aria-expanded="true"] + .main-menu {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: $space-md 0;
   text-align: center;
 
   nav {
-    font-size: 2rem;
+    font-size: $font-size-xxl;
   }
 
   .meta-links {
-    margin-top: 3rem;
+    margin-top: $space-lg;
   }
 
   .site-sections {
@@ -98,7 +98,7 @@
 
   display: flex;
   align-items: stretch;
-  min-height: 3.5rem;
+  min-height: $space-lg;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,8 +125,8 @@
     align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
+    padding-top: $space-sm-relative;
+    padding-bottom: $space-sm-relative;
   }
 }
 

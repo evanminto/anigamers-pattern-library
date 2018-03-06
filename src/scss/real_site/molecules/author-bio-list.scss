@@ -1,3 +1,5 @@
+@import '../_base';
+
 .author-bio-list {
   list-style: none;
   padding: 0;
@@ -6,11 +8,11 @@
     margin: 0;
 
     + * {
-      margin-top: 0.8rem;
+      margin-top: $space-sm;
     }
   }
 
   > * + * {
-    margin-top: 1.6rem;
+    margin-top: $space-md;
   }
 }

@@ -1,4 +1,6 @@
+@import '../_base';
+
 .content {
-  max-width: 80rem;
+  max-width: 50 * $vertical-rhythm;
   margin: 0 auto;
 }

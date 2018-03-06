@@ -1,6 +1,6 @@
 @import '_base';
 
-body {
+:root {
   --header-z-index: $header-z-index;
   --border-radius: $border-radius;
   --header-icon-size: $header-icon-size;
@@ -43,13 +43,26 @@ body {
   --secondary-base-dark-color: $secondary-base-dark-color;
   --twitter-blue: $twitter-blue;
 
+  --color-primary: $color-primary;
+  --color-primary-dark: $color-primary-dark;
+  --color-secondary: $color-secondary;
+  --color-secondary-dark: $color-secondary-dark;
+  --color-gray-primary: $color-gray-primary;
+  --color-gray-secondary: $color-gray-secondary;
+  --color-off-black: $color-off-black;
+}
+
+body {
   @include default-font;
 
   margin: 0;
-  padding: 3.5rem 0 0 0;
-  font-size: 0.875rem;
-  color: $secondary-dark-color;
-  background-color: $base-color;
+  padding: 2.34375 * $vertical-rhythm 0 0 0;
+  width: 100%;
+
+  line-height: $line-height;
+
+  color: $color-off-black;
+  background-color: $color-gray-secondary;
 }
 
 template {
@@ -234,7 +247,7 @@ main {
 }
 
 figure {
-  margin: 1em auto;
+  margin: $space-sm auto;
 
   text-align: center;
 
@@ -242,13 +255,13 @@ figure {
   video,
   audio,
   object {
-    margin: 0 auto 0.5em auto;
+    margin: 0 auto $space-xs auto;
     max-width: 100%;
   }
 }
 
 figcaption {
-  font-size: $font-size-xs;
+  font-size: $font-size-smaller;
   font-style: italic;
 
   cite,
@@ -259,8 +272,8 @@ figcaption {
 }
 
 hr {
-  margin: 2em 0;
+  margin: $space-md 0;
 
-  border: $entry-hr-width solid $blood-red;
+  border: $entry-hr-width solid $color-secondary;
   border-radius: $entry-hr-width;
 }

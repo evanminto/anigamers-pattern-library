@@ -2,31 +2,32 @@
 
 .site-sections {
   @include clear-spacing;
+
   display: flex;
-  font-size: 1rem;
+  font-size: $font-size-sm;
   list-style: none;
 
   a {
-    color: $primary-color;
+    color: $color-primary;
     display: block;
-    padding: 0.3em 0.7em;
+    padding: $space-xxs-relative $space-sm-relative;
 
     &:visited {
-      color: $primary-dark-color;
+      color: $color-primary-dark;
     }
 
     &:active,
     &:focus,
     &:hover {
-      color: $secondary-base-color;
-      background: $primary-color;
+      color: white;
+      background: $color-primary;
       text-decoration: underline;
-      text-decoration: underline solid $primary-color;
+      text-decoration: underline solid $color-primary;
 
       &:visited {
-        background: $primary-dark-color;
+        background: $color-primary-dark;
         text-decoration: underline;
-        text-decoration: underline solid $primary-dark-color;
+        text-decoration: underline solid $color-primary-dark;
       }
     }
   }

@@ -5,25 +5,25 @@
     margin-bottom: 0;
     font-size: $font-size-xl;
     line-height: 1.365333333333333;
+    line-height: $line-height-xl;
 
     a {
       padding: 0;
 
-      color: $nihon-red;
+      color: $color-primary;
       text-decoration: none;
 
       &:focus,
       &:hover {
         background: none;
-        color: $primary-dark-color;
+        color: $color-primary-dark;
       }
     }
   }
 
   .subtitle {
-    margin-top: 0.2em;
+    margin-top: $space-xxs;
 
     font-size: $font-size-sm;
-    line-height: 1.6;
   }
 }

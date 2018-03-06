@@ -62,20 +62,20 @@
   padding: 0;
 
   nav {
-    font-size: 1rem;
+    font-size: $space-sm;
   }
 
   .site-sections {
     display: flex;
-    font-size: 1rem;
+    font-size: $space-sm;
   }
 
   .meta-links {
     margin-top: 0;
 
     li > a {
-      width: 1.4rem;
-      height: 1.4rem;
+      width: $space-md;
+      height: $space-md;
     }
   }
 }

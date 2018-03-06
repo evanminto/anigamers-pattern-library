@@ -1,3 +1,5 @@
+@import '../_base';
+
 .simple-text-form {
   align-items: center;
   display: block;
@@ -7,7 +9,7 @@
     float: left;
 
     + * {
-      margin-left: 0.8rem;
+      margin-left: $space-sm;
     }
   }
 

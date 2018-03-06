@@ -14,8 +14,18 @@ $transition-1-frame: (1000ms / 24);
 $space-md: $vertical-rhythm;
 $space-lg: $space-md * 2;
 $space-xl: $space-lg * 2;
+$space-xxl: $space-xl * 2;
 $space-sm: $space-md / 2;
 $space-xs: $space-sm / 2;
+$space-xxs: $space-xs / 2;
+
+$space-md-relative: $line-height * 1em;
+$space-lg-relative: $space-md-relative * 2;
+$space-xl-relative: $space-lg-relative * 2;
+$space-xxl-relative: $space-xl-relative * 2;
+$space-sm-relative: $space-md-relative / 2;
+$space-xs-relative: $space-sm-relative / 2;
+$space-xxs-relative: $space-xs-relative / 2;
 
 $header-z-index: 10;
 $border-small: 0.0625rem;

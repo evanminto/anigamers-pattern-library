@@ -1,3 +1,5 @@
+@import '../_base';
+
 .main-menu {
   display: none;
   padding: 0;
@@ -7,7 +9,7 @@
   width: 100%;
 
   nav {
-    font-size: 1rem;
+    font-size: $font-size-sm;
     width: 100%;
   }
 
@@ -17,15 +19,15 @@
 
   .site-sections {
     display: flex;
-    font-size: 1rem;
+    font-size: $font-size-sm;
   }
 
   .meta-links {
     margin-top: 0;
 
     li > a {
-      width: 1.4rem;
-      height: 1.4rem;
+      width: $space-md;
+      height: $space-md;
     }
   }
 }

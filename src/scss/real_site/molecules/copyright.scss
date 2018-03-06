@@ -1,14 +1,14 @@
 @import '../_base';
 
 .copyright {
-  margin-top: 4rem;
+  margin-top: 2.5 * $vertical-rhythm;
 
   small {
     font-size: $font-size-xs;
   }
 
   p {
-    margin: 1em 0;
+    margin: $space-sm 0;
 
     &:first-child {
       margin-top: 0;
@@ -16,7 +16,7 @@
   }
 
   img {
-    margin: 0 0 1em 0;
+    margin: 0 0 $space-sm 0;
     width: auto;
   }
 }

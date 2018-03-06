@@ -1,55 +1,58 @@
 @import '../_base';
 
 .page-links {
-  padding: 1em;
+  padding: $space-sm-relative;
 
   font-size: $font-size-md;
   text-align: center;
 
   .curr-page {
-    margin: 0 0.6em;
+    margin: 0 $space-sm-relative;
   }
 
   a {
     @include drop-shadow;
 
     display: inline-block;
-    height: 1.6em;
-    margin-bottom: 0.2em;
+    height: $space-md-relative;
+    margin-bottom: $space-xxs-relative;
     overflow: hidden;
     vertical-align: middle;
-    width: 1.6em;
+    width: $space-md-relative;
+
+    text-decoration: none;
 
     background: $primary-color;
     color: $secondary-base-color;
-    text-decoration: none;
 
-    border-radius: 0.8em;
+    border-radius: $space-sm-relative;
 
     &:hover {
       @include drop-shadow(1);
 
-      background: $primary-dark-color;
+      background: $color-primary-dark;
     }
 
     &::before {
       box-sizing: border-box;
       display: block;
       height: 100%;
-      padding: 0.1em 0 0 0;
       width: 100%;
 
       font-weight: bold;
+      line-height: 1.4em;
     }
   }
 
   .prev-link::before {
     content: '\003c';
     padding-right: 0.1em;
+    padding-right: 0.2ch;
   }
 
   .next-link::before {
     content: '\003e';
     padding-left: 0.1em;
+    padding-left: 0.2ch;
   }
 }

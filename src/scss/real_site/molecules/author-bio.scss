@@ -1,17 +1,16 @@
 @import '../_base';
 
 .author-bio {
-  font-size: 1rem;
+  font-size: $font-size-sm;
   font-style: normal;
-  line-height: 1.6;
   text-align: center;
 
   img {
     display: block;
-    height: 4.8rem;
+    height: 3 * $vertical-rhythm;
     margin: 0 auto;
     max-width: 100%;
-    width: 4.8rem;
+    width: 3 * $vertical-rhythm;
 
     object-fit: cover;
     object-position: center;
@@ -33,11 +32,11 @@
     }
 
     img {
-      margin-right: 0.8rem;
+      margin-right: $space-sm;
 
       float: left;
       shape-outside: border-box;
-      shape-margin: 0.8rem;
+      shape-margin: $space-sm;
     }
   }
 }

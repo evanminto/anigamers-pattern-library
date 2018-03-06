@@ -58,11 +58,6 @@ $total-width: gridsystem-width($columns);
 // GRID //
 //////////
 
-body {
-	width: 100%;
-// 	@include clearfix();
-}
-
 @mixin row($local-columns:$columns) {
 	display: flex;
   justify-content: space-between;

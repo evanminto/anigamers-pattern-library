@@ -1,8 +1,9 @@
 @import '../_base';
 
 .review-rating {
-  font-size: 1.333em;
+  font-size: $font-size-larger;
   font-weight: bold;
-  color: $blood-red;
   text-align: center;
+
+  color: $color-secondary;
 }
