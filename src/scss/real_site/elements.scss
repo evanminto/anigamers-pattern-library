@@ -197,6 +197,11 @@ input {
 
   @include drop-shadow;
 
+  @include input-placeholder {
+    color: $color-placeholder;
+    opacity: 1;
+  }
+
   &:focus {
     @include drop-shadow(1);
   }
@@ -263,6 +268,24 @@ figure {
 figcaption {
   font-size: $font-size-smaller;
   font-style: italic;
+
+  cite,
+  em,
+  i {
+    font-style: normal;
+  }
+}
+
+blockquote {
+  margin: $space-sm 0;
+  color: $color-primary-dark;
+  font-style: italic;
+  border-left: currentColor $space-xs solid;
+  padding-left: $space-md;
+
+  p {
+    margin: $space-sm 0;
+  }
 
   cite,
   em,
