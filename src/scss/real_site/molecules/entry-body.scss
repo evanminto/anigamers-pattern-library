@@ -33,12 +33,6 @@
     margin: $space-sm-relative 0;
   }
 
-  ul {
-    margin-left: $space-md-relative;
-
-    list-style: disc;
-  }
-
   img {
     @include drop-shadow;
 
