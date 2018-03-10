@@ -328,10 +328,13 @@
   });
 
   skipToMainContentLink = document.querySelector('.js-skip-to-main-content');
-  skipToMainContentLink.addEventListener('click', function() {
-    ga('send', 'event', 'Link', 'click', 'Skip to Main Content');
-  });
-  skipToMainContentLink.addEventListener('focus', function() {
-    ga('send', 'event', 'Link', 'focus', 'Skip to Main Content');
-  });
+
+  if (skipToMainContentLink) {
+    skipToMainContentLink.addEventListener('click', function() {
+      ga('send', 'event', 'Link', 'click', 'Skip to Main Content');
+    });
+    skipToMainContentLink.addEventListener('focus', function() {
+      ga('send', 'event', 'Link', 'focus', 'Skip to Main Content');
+    });
+  }
 })();

@@ -11,6 +11,7 @@ context:
       src: /css/real_site/header-large.css
       media: "(min-width: 60em)"
   headerSearchForm:
+    id: header_search_form
     closeControlsId: header_search_link
   headerSearchLink:
     id: header_search_link

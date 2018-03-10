@@ -13,11 +13,11 @@
     flex: 1 1 auto;
 
     > * {
-      position: absolute;
-      left: -5%;
-      top: -5%;
       clip: rect(1px 1px 1px 1px);
       clip: rect(1px, 1px, 1px, 1px);
+      left: -5%;
+      position: absolute;
+      top: -5%;
     }
 
     input {
@@ -32,23 +32,28 @@
 
   button,
   input {
-    height: ($vertical-rhythm * 1.25);
+    height: $vertical-rhythm * 1.25;
+    font-size: $font-size-sm;
   }
 
   button {
-    padding-top: 0;
     padding-bottom: 0;
+    padding-top: 0;
+    white-space: nowrap;
+
+    .svg-icon {
+      margin: 0 0.25em 0.1em 0;
+      margin: 0 0.5ch 0.1em 0;
+    }
   }
 
   input {
-    padding: 0 2ch;
-    width: 100%;
-
     border: 0;
     border-bottom: 0.125rem solid $secondary-dark-color;
-
     border-radius: 0;
     box-shadow: none;
+    padding: 0;
+    width: 100%;
 
     &:focus {
       border-bottom-color: $secondary-color;
@@ -56,12 +61,12 @@
   }
 
   .wrapper-link {
-    padding: ($vertical-rhythm / 8) ($vertical-rhythm / 2);
-    margin: 0 ($vertical-rhythm / -2) 0 0;
     border-radius: 0;
+    margin: 0 ($vertical-rhythm / -2) 0 0;
+    padding: 0 ($vertical-rhythm / 2);
 
     .svg-icon {
-      height: 1.25rem;
+      height: $space-md;
     }
   }
 }

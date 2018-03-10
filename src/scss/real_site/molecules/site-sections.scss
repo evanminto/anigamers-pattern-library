@@ -10,7 +10,7 @@
   a {
     color: $color-primary;
     display: block;
-    padding: $space-xxs-relative $space-sm-relative;
+    padding: 0 $space-sm-relative;
 
     &:visited {
       color: $color-primary-dark;

@@ -96,16 +96,17 @@
 .site-header {
   @include drop-shadow(1);
 
-  display: flex;
   align-items: stretch;
-  min-height: $space-lg;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: $header-z-index;
-  overflow: hidden;
   background: $secondary-base-color;
+  display: flex;
+  left: 0;
+  line-height: $line-height;
+  min-height: $space-lg;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $header-z-index;
 
   &.-search-open {
     .logo,
@@ -119,14 +120,15 @@
   > .content {
     @include row;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     align-content: flex-start;
+    align-items: center;
+    display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding-top: $space-sm-relative;
+    height: 2.25 * $vertical-rhythm;
+    justify-content: space-between;
     padding-bottom: $space-sm-relative;
+    padding-top: $space-sm-relative;
+    width: 100%;
   }
 }
 
