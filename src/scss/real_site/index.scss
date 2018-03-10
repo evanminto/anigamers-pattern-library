@@ -58,7 +58,6 @@ body {
     z-index: 0;
     object-fit: cover;
     object-position: center center;
-    -webkit-filter: grayscale(40%) contrast(60%);
     filter: grayscale(40%) contrast(60%);
   }
 
@@ -180,7 +179,6 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    -webkit-filter: opacity(0.5) contrast(0.7) grayscale(0.4);
     filter: opacity(0.5) contrast(0.7) grayscale(0.4);
   }
 

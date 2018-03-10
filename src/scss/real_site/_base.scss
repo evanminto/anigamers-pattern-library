@@ -40,19 +40,7 @@ $entry-border-width: $entry-hr-width * 1.6;
 
 // For some reason this isn't working in Compass.
 @mixin input-placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-
-  &:-moz-placeholder {
-    @content;
-  }
-
-  &::-moz-placeholder {
-    @content;
-  }
-
-  &:-ms-input-placeholder {
+  &::placeholder {
     @content;
   }
 }
@@ -92,8 +80,7 @@ $entry-border-width: $entry-hr-width * 1.6;
 }
 
 @mixin filter-drop-shadow($height: 0) {
-  -webkit-filter: drop-shadow(0px #{1px + $height} #{1px + $height} rgba($box-shadow-color, 0.1));
-          filter: drop-shadow(0px #{1px + $height} #{1px + $height} rgba($box-shadow-color, 0.1));
+  filter: drop-shadow(0px #{1px + $height} #{1px + $height} rgba($box-shadow-color, 0.1));
 }
 
 @mixin cutout-drop-shadow($height: 0) {
@@ -128,7 +115,7 @@ $entry-border-width: $entry-hr-width * 1.6;
     right: 0;
     left: 0;
     overflow: hidden;
-    -webkit-filter: grayscale($desaturation);
+    filter: grayscale($desaturation);
 
     @content;
   }
@@ -419,7 +406,6 @@ $entry-border-width: $entry-hr-width * 1.6;
     height: 10rem;
     position: static;
     border-radius: $border-radius;
-    -webkit-filter: none;
     filter: none;
   }
 

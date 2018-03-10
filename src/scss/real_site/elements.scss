@@ -180,8 +180,6 @@ input {
   height: $vertical-rhythm * 1.5;
   padding: ($vertical-rhythm / 2) 2ch;
 
-  -ms-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 
   font-size: 0.8rem;
@@ -214,8 +212,6 @@ button {
   height: $vertical-rhythm * 1.5;
   padding: ($vertical-rhythm / 2) 2ch;
 
-  -ms-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 
   font-size: inherit;
