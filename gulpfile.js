@@ -27,7 +27,9 @@ gulp.task('build-css-prod', () => {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({ browsers: browsersList }),
-      cssnano(),
+      cssnano({
+        safe: true,
+      }),
     ]))
     .pipe(gulp.dest('public/css/'));
 });
