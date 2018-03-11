@@ -125,40 +125,39 @@ svg {
 }
 
 a {
+  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
   transition:
     background ($transition-1-frame * 4) ease-out,
-    color ($transition-1-frame * 4) ease-out,
-    text-decoration ($transition-1-frame * 4) ease-out;
+    color ($transition-1-frame * 4) ease-out;
 
   &:link,
-  &:visited,
-  &:active {
-    text-decoration: none;
+  &:visited {
+    text-decoration: underline;
     border-radius: $border-radius;
     border-radius: var(--border-radius);
-    text-decoration: underline;
-    text-decoration: underline solid $transparent-nihon-red;
-    text-decoration-skip: ink;
-    text-decoration-skip-ink: auto;
   }
 
-  &:link,
-  &:active {
+  &:link {
     color: $primary-color;
-    color: var(--primary-color);
+    text-decoration: underline solid rgba($primary-color, 0.4);
   }
 
   &:visited {
     color: $primary-dark-color;
-    color: var(--primary-dark-color);
+    text-decoration: underline solid rgba($primary-dark-color, 0.4);
   }
 
+  &:active,
   &:focus,
   &:hover {
     color: $secondary-base-color;
-    color: var(--secondary-base-color);
     background: $primary-color;
-    background: var(--primary-color);
+    text-decoration: none;
+    transition:
+      background ($transition-1-frame * 4) ease-out,
+      color ($transition-1-frame * 4) ease-out,
+      text-decoration 0s ease-out;
   }
 }
 
