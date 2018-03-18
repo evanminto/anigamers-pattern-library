@@ -22,6 +22,26 @@ context:
   entries:
     -
       title: 'Review: Yuri on Ice'
+      subtitle: 'Our AnimeNEXT 2017 interview with animators Junpei Tatenaka and Noriko Itou, color designer Izumi Hirose, and producer Takahiro Ogawa'
+      authors: Ink
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Yuri-on-Ice.jpg
+      thumbnailLarge: /images/Yuri-on-Ice.jpg
+    -
+      title: 'Review: Mary and the Witch’s Flower'
+      authors: Evan Minto
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
+      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
+    -
+      title: 'Ani-Gamers Podcast #089 – Flat Earth Anime'
+      authors: Evan Minto and David Estrella
+      timestamp: Monday, Feb 26, 2018
+      thumbnailSmall: /images/Jaxa-Anime.jpg
+      thumbnailLarge: /images/Jaxa-Anime.jpg
+    -
+      title: 'Review: Yuri on Ice'
+      subtitle: 'Our AnimeNEXT 2017 interview with animators Junpei Tatenaka and Noriko Itou, color designer Izumi Hirose, and producer Takahiro Ogawa'
       authors: Ink
       timestamp: Monday, Feb 26, 2018
       thumbnailSmall: /images/Yuri-on-Ice.jpg
@@ -34,6 +54,7 @@ context:
       thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
     -
       title: 'Review: Yuri on Ice'
+      subtitle: 'Our AnimeNEXT 2017 interview with animators Junpei Tatenaka and Noriko Itou, color designer Izumi Hirose, and producer Takahiro Ogawa'
       authors: Ink
       timestamp: Monday, Feb 26, 2018
       thumbnailSmall: /images/Yuri-on-Ice.jpg
@@ -46,6 +67,7 @@ context:
       thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
     -
       title: 'Review: Yuri on Ice'
+      subtitle: 'Our AnimeNEXT 2017 interview with animators Junpei Tatenaka and Noriko Itou, color designer Izumi Hirose, and producer Takahiro Ogawa'
       authors: Ink
       timestamp: Monday, Feb 26, 2018
       thumbnailSmall: /images/Yuri-on-Ice.jpg
@@ -58,36 +80,7 @@ context:
       thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
     -
       title: 'Review: Yuri on Ice'
-      authors: Ink
-      timestamp: Monday, Feb 26, 2018
-      thumbnailSmall: /images/Yuri-on-Ice.jpg
-      thumbnailLarge: /images/Yuri-on-Ice.jpg
-    -
-      title: 'Review: Mary and the Witch’s Flower'
-      authors: Evan Minto
-      timestamp: Monday, Feb 26, 2018
-      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
-      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
-    -
-      title: 'Review: Yuri on Ice'
-      authors: Ink
-      timestamp: Monday, Feb 26, 2018
-      thumbnailSmall: /images/Yuri-on-Ice.jpg
-      thumbnailLarge: /images/Yuri-on-Ice.jpg
-    -
-      title: 'Review: Mary and the Witch’s Flower'
-      authors: Evan Minto
-      timestamp: Monday, Feb 26, 2018
-      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
-      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
-    -
-      title: 'Review: Mary and the Witch’s Flower'
-      authors: Evan Minto
-      timestamp: Monday, Feb 26, 2018
-      thumbnailSmall: /images/Mary-and-the-Witchs-Flower.jpg
-      thumbnailLarge: /images/Mary-and-the-Witchs-Flower.jpg
-    -
-      title: 'Review: Yuri on Ice'
+      subtitle: 'Our AnimeNEXT 2017 interview with animators Junpei Tatenaka and Noriko Itou, color designer Izumi Hirose, and producer Takahiro Ogawa'
       authors: Ink
       timestamp: Monday, Feb 26, 2018
       thumbnailSmall: /images/Yuri-on-Ice.jpg

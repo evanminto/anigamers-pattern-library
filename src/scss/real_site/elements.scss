@@ -55,12 +55,12 @@
 body {
   @include default-font;
 
+  background-color: white;
+  color: $color-off-black;
+  line-height: $line-height;
   margin: 0;
   padding: 2.25 * $vertical-rhythm 0 0 0;
   width: 100%;
-
-  color: $color-off-black;
-  background-color: $color-gray-secondary;
 }
 
 template {
@@ -128,7 +128,7 @@ a {
   text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   transition:
-    background ($transition-1-frame * 4) ease-out,
+    background-color ($transition-1-frame * 4) ease-out,
     color ($transition-1-frame * 4) ease-out;
 
   &:link,
@@ -155,7 +155,7 @@ a {
     background: $primary-color;
     text-decoration: none;
     transition:
-      background ($transition-1-frame * 4) ease-out,
+      background-color ($transition-1-frame * 4) ease-out,
       color ($transition-1-frame * 4) ease-out,
       text-decoration 0s ease-out;
   }
@@ -219,7 +219,7 @@ button {
   border-radius: $border-radius;
 
   transition:
-    background ($transition-1-frame * 4) ease-out,
+    background-color ($transition-1-frame * 4) ease-out,
     color ($transition-1-frame * 4) ease-out;
 
   &:hover,

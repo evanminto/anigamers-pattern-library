@@ -324,18 +324,12 @@
 
 @include x-large-screen {
   main > .content {
-    background: transparent;
-
     border-radius: none;
-    box-shadow: none;
   }
 
   .entry {
     display: flex;
     flex: 1 1 100%;
-
-    background: $secondary-base-color;
-    border-radius: $border-radius;
 
     > .content {
       flex: 0 0 65.78947%;

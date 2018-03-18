@@ -15,6 +15,8 @@ $space-md: $vertical-rhythm;
 $space-lg: $space-md * 2;
 $space-xl: $space-lg * 2;
 $space-xxl: $space-xl * 2;
+$space-xxxl: $space-xxl * 2;
+$space-xxxxl: $space-xxxl * 2;
 $space-sm: $space-md / 2;
 $space-xs: $space-sm / 2;
 $space-xxs: $space-xs / 2;
@@ -76,7 +78,7 @@ $entry-border-width: $entry-hr-width * 1.6;
 }
 
 @mixin drop-shadow($height: 0) {
-  box-shadow: 0px #{1px + $height} #{2px + $height} $box-shadow-color;
+  box-shadow: 0px #{1px + $height / 2} #{2px + $height} darken($box-shadow-color, $height * 1%);
 }
 
 @mixin filter-drop-shadow($height: 0) {
@@ -315,110 +317,6 @@ $entry-border-width: $entry-hr-width * 1.6;
 
 @function card-metadata-padding($cards) {
   @return gridsystem-gutter-width() * $total-width / (($total-width - (($cards + 1) * gridsystem-gutter-width())) / $cards);
-}
-
-@mixin card-entry {
-  @include column(6, $columns, false);
-
-  display: flex;
-  float: none;
-  margin-left: gridsystem-gutter-full-width();
-
-  .entry {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    border: 0;
-    color: #000000;
-
-    box-shadow: none;
-    text-shadow: none;
-
-    &:focus,
-    &:hover {
-      h1 {
-        color: $primary-dark-color;
-      }
-
-      .thumbnail {
-        @include drop-shadow(1);
-      }
-
-      // Nested to match the specificity it's overriding.
-      .metadata {
-        background: none;
-      }
-    }
-
-    & > a:first-of-type {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      color: #000000;
-      background: none;
-    }
-
-    header {
-      margin: 0;
-    }
-
-    h1 {
-      font-size: $font-size-md;
-      color: $primary-color;
-    }
-
-    .subtitle {
-      display: none;
-    }
-
-    p,
-    .topics,
-    .authors {
-      margin: 0.5em 0;
-      color: $secondary-dark-color;
-    }
-
-    .authors,
-    .entry-timestamp,
-    .topics {
-      display: block;
-    }
-
-    // Nested to match the specificity it's overriding.
-    .metadata {
-      border-radius: none;
-      background: none;
-    }
-
-    :visited h1 {
-      color: $primary-dark-color;
-    }
-  }
-
-  .thumbnail {
-    @include drop-shadow;
-
-    display: block;
-    height: 10rem;
-    position: static;
-    border-radius: $border-radius;
-    filter: none;
-  }
-
-  .metadata {
-    display: block;
-    flex: 0 0 auto;
-    position: static;
-    padding: 0.75rem 0 0 0;
-  }
-
-  .metadata-inner {
-    position: static;
-  }
 }
 
 @mixin absolute-fill($size) {

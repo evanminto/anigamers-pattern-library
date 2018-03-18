@@ -5,312 +5,267 @@ body {
   padding-right: 0;
 }
 
-.entries {
-  @include clear-spacing;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  text-align: center;
-  list-style: none;
-
-  > li {
-    width: 100%;
-    margin-bottom: $space-md;
-  }
-}
-
 .entry {
-  @include drop-shadow;
+  height: 100%;
 
-  text-align: left;
-  text-shadow: 0 0 $space-xxs-relative opacify($text-shadow-color, 0.5);
-
-  &:hover {
+  a {
     @include drop-shadow(1);
-  }
 
-  .thumbnail {
-    @include absolute-fill(true);
-  }
-
-  .metadata {
+    border-radius: 0;
+    display: block;
+    height: 100%;
+    overflow: hidden;
     position: relative;
-    z-index: 1;
-    padding: $space-xl gridsystem-gutter-width() $space-md gridsystem-gutter-width();
-    background-color: rgba($secondary-color, 0.35);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    text-decoration: none;
 
+    &:active,
+    &:focus,
     &:hover {
-      background-color: rgba($secondary-color, 0.2);
-    }
+      @include drop-shadow(2);
 
-    .entries > :nth-child(2n) & {
-      background-color: rgba($primary-color, 0.35);
+      background: none;
 
-      &:hover {
-        background-color: rgba($primary-color, 0.2);
+      img {
+        transform: scale(1.0625);
+      }
+
+      .metadata {
+        background-color: rgba(darken($color-secondary-dark, 5%), 0.6);
       }
     }
   }
 
-  .thumbnail {
-    z-index: 0;
-    object-fit: cover;
-    object-position: center center;
-    filter: grayscale(40%) contrast(60%);
-  }
-
-  & > a:first-of-type {
+  img {
+    bottom: 0;
     display: block;
-    box-sizing: border-box;
-    position: relative;
-    color: #FFFFFF;
-    text-decoration: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.85;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 3 * $transition-1-frame ease-in-out;
+    width: 100%;
+    z-index: 1;
   }
 
   header {
-    margin-bottom: $vertical-rhythm;
+    > * {
+      margin: 0;
+    }
   }
 
-  h1 {
-    @include heading-font;
-
-    margin-bottom: $space-xxs-relative;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: $font-size-lg;
-    font-weight: normal;
+    line-height: $line-height-lg;
+  }
+
+  .metadata {
+    @include text-drop-shadow;
+
+    background-color: rgba(darken($color-off-black, 12%), 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(darken($color-off-black, 12%), 0.85),
+      transparent
+    );
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding: $space-xl gridsystem-gutter-width() $space-md;
+    position: relative;
+    transition:
+      box-shadow 4 * $transition-1-frame ease-in-out,
+      background-color 4 * $transition-1-frame ease-in-out;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .metadata,
+  .metadata-inner {
+    > * {
+      margin: 0;
+
+      + * {
+        margin-top: $space-sm;
+      }
+    }
   }
 
   .subtitle {
-    margin: 0;
-    font-size: $font-size-sm;
-    font-weight: normal;
+    display: none;
   }
 
-  p,
-  .authors {
-    margin-top: $vertical-rhythm / 4;
+  .authors,
+  .publication-date {
     font-size: $font-size-xs;
+    line-height: $line-height-xs;
   }
 
-  .authors {
-    display: block;
-  }
-
-  .author-list {
-    @include comma-list(true);
-
-    display: inline;
+  .publication-date {
+    margin-top: $space-xxs;
   }
 }
 
-.entries > li.columns-catalog {
-  @include row;
-  @include cutout-drop-shadow;
-
-  flex: 1 0 auto;
-  display: block;
+.entries {
+  display: grid;
+  grid-gap: $space-xs;
+  grid-template-columns: repeat(6, 1fr);
+  list-style: none;
   margin: 0;
-  padding-top: gridsystem-gutter-width();
-  padding-bottom: gridsystem-gutter-width();
-  background: $secondary-base-color;
-  color: $primary-dark-color;
+  padding: 0;
+
+  > * {
+    grid-column-end: span 6;
+    margin: 0;
+
+    + * {
+      margin-top: $space-xs;
+    }
+  }
+
+  @supports (display: grid) {
+    > * {
+      margin: 0;
+    }
+  }
 }
 
-.entries:not(.first-page) li.columns-catalog {
+.columns-catalog {
   display: none;
 }
 
-.columns {
-  @include clear-spacing;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  list-style: none;
+.page-links {
+  margin-top: $space-md;
 }
 
-.columns-section-title {
-  @include heading-font;
+main > .content {
+  max-width: 20 * $vertical-rhythm;
 
-  margin: 0 0 0.3em 0;
-
-  font-size: $font-size-xl;
-  text-align: left;
-}
-
-.column {
-  @include column(12);
-  @include heading-font;
-  @include drop-shadow;
-
-  position: relative;
-  height: $space-xxl;
-  margin: 0 0 $space-sm 0;
-
-  border-radius: $border-radius;
-
-  &:hover {
-    @include drop-shadow(1);
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  > section {
-    height: 100%;
-  }
-
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: $primary-color;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    filter: opacity(0.5) contrast(0.7) grayscale(0.4);
-  }
-
-  h1 {
-    position: absolute;
-    text-align: left;
-    padding: $space-sm;
-    color: $secondary-base-color;
-    text-transform: uppercase;
-    font-size: $font-size-xl;
-    line-height: 1.2;
-    bottom: 0;
-    margin: 0;
-    text-shadow: 0 0 0.1em opacify($text-shadow-color, 0.4);
+  @supports (display: grid) {
+    max-width: 50 * $vertical-rhythm;
   }
 }
 
 @include small-screen {
-  main > .content {
-    box-sizing: border-box;
-    overflow: visible;
-  }
-
   .entries {
-    justify-content: flex-start;
+    grid-gap: $space-md $space-xs;
 
-    background: $secondary-base-color;
-    border-radius: $border-radius;
-
-    > li {
-      margin-bottom: $space-md;
+    > :not(:first-child) {
+      grid-column-end: span 3;
     }
 
-    // Children 1-2
-    > :nth-child(-n+2) {
-      @include medium-entry;
-    }
+    @supports (display: grid) {
+      > :nth-child(even) .entry a {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
 
-    &:not(.first-page) {
-      padding-top: $space-md;
+      > :nth-child(odd) .entry a {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
 
-      // Children 1-2
-      > :nth-child(-n+2) {
-        @include card-entry;
+      > :first-child {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: $font-size-xl;
+          line-height: $line-height-xl;
+        }
+
+        .entry a {
+          border-radius: 0;
+        }
+
+        .metadata {
+          padding-top: $space-xxl;
+        }
       }
     }
-
-    // Children 3+
-    > :nth-child(n+3) {
-      @include card-entry;
-    }
-
-    // Children 1-6
-    > :nth-child(-n+6) {
-      order: 0;
-    }
-
-    // Children 6+
-    > :nth-child(n+7) {
-      order: 2;
-    }
-
-    li.columns-catalog {
-      order: 1;
-      margin: $space-md 0 $space-xl 0;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      box-shadow: none;
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        height: $space-xxs;
-        background: $primary-dark-color;
-        border-radius: $border-radius;
-        margin: $space-xxs 0;
-      }
-    }
-  }
-
-  .column {
-    @include column(6);
   }
 }
 
 @include medium-screen {
   .entries {
-    &:not(.first-page) > li {
-      @include card-entry;
+    > :first-child,
+    > :nth-child(2) {
+      grid-column-end: span 3;
     }
 
-    > :nth-child(n+3),
-    &:not(.first-page) > :nth-child(n) {
-      @include column(4, $columns, false);
+    @supports (display: grid) {
+      > :first-child .entry a {
+        border-radius: 0 0 $border-radius 0;
+      }
+
+      > :nth-child(2) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: $font-size-xl;
+          line-height: $line-height-xl;
+        }
+
+        .entry a {
+          border-radius: 0 0 0 $border-radius;
+        }
+
+        .metadata {
+          padding-top: $space-xxl;
+        }
+      }
+
+      > :nth-child(3n+3) .entry a {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+
+      > :nth-child(3n+4) .entry a {
+        border-radius: $border-radius;
+      }
+
+      > :nth-child(3n+5) .entry a {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
     }
 
-    // Children 1-8
-    > :nth-child(-n+8) {
-      order: 0;
+    > :not(:first-child):not(:nth-child(2)) {
+      grid-column-end: span 2;
     }
-
-    // Children 9+
-    > :nth-child(n+9) {
-      order: 2;
-    }
-
-    .columns-catalog {
-      order: 1;
-    }
-  }
-
-  .column {
-    @include column(4);
-
-    margin: 0 (gridsystem-gutter-width() / 2.0) 1rem (gridsystem-gutter-width() / 2.0);
   }
 }
 
-@include large-screen {
-  body {
-    padding-left: 2.63158%;
-    padding-right: 2.63158%;
+@include x-large-screen {
+  main > .content {
+    padding: 0 gridsystem-gutter-width();
+    box-sizing: border-box;
   }
 
   .entries {
-    &.first-page {
-      > :nth-child(1) .entry .metadata,
-      > :nth-child(2) .entry .metadata {
-        padding-left: gridsystem-gutter-width() * 2;
-        padding-right: gridsystem-gutter-width() * 2;
+    @supports (display: grid) {
+      > :nth-child(n) .entry a {
+        border-radius: $border-radius;
+      }
+
+      > :first-child .entry a {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      > :nth-child(2) .entry a {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
     }
   }

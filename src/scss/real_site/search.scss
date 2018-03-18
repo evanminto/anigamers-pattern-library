@@ -29,7 +29,6 @@ main {
   }
 
   .svg-icon.-with-stroke {
-    height: $space-md-relative;
     margin: 0 $space-xs-relative 0 0;
     stroke-width: $space-md-relative;
   }
@@ -56,6 +55,10 @@ main {
       }
     }
   }
+}
+
+.page-links {
+  margin-top: $space-md;
 }
 
 @include medium-screen {

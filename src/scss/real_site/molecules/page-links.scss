@@ -1,9 +1,8 @@
 @import '../_base';
 
 .page-links {
-  padding: $space-sm-relative;
-
   font-size: $font-size-md;
+  padding: 0 $space-sm-relative;
   text-align: center;
 
   .curr-page {
