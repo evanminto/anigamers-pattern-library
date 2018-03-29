@@ -2,15 +2,12 @@
 
 .pull-quote-2017 {
   @include emphasis-font;
-  @include text-drop-shadow;
 
+  border: 0 solid currentColor;
+  color: $color-primary-dark;
   display: block;
-  margin: $space-sm-relative 0;
-
   font-size: $font-size-x-larger;
   font-weight: bold;
+  margin: $space-sm-relative 0;
   text-align: center;
-
-  color: $color-primary-dark;
-  border: 0 solid currentColor;
 }
