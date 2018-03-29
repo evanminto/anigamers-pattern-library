@@ -1,6 +1,15 @@
 @import '../_base';
 
 .entry-titles {
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    + * {
+      margin-top: $space-sm;
+    }
+  }
+
   .title {
     margin-bottom: 0;
     font-size: $font-size-xl;
@@ -22,8 +31,6 @@
   }
 
   .subtitle {
-    margin-top: $space-xxs;
-
     font-size: $font-size-sm;
   }
 }
