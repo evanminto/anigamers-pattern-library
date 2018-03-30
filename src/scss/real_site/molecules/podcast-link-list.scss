@@ -1,0 +1,18 @@
+@import '../_base';
+
+.podcast-link-list {
+  columns: 3 20ch;
+  column-rule: 0.0625rem solid $color-gray-secondary;
+  column-gap: $space-md;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+
+  > * {
+    margin: 0;
+
+    + * {
+      margin-top: $space-xs;
+    }
+  }
+}

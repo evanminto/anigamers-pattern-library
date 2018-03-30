@@ -7,6 +7,12 @@
 
   th,
   td {
-    padding: $space-xs-relative;
+    padding: $space-xs-relative 0;
+    vertical-align: top;
+  }
+
+  * + th,
+  * + td {
+    padding-left: $space-md-relative;
   }
 }

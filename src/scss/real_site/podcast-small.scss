@@ -1,0 +1,31 @@
+@import '_base';
+
+.podcast-details {
+  .summary {
+    display: grid;
+    grid-gap: $space-sm $space-md;
+    grid-template-columns: 10 * $vertical-rhythm 1fr;
+    grid-template-rows: auto 1fr;
+
+    &__description {
+      grid-column-start: 2;
+    }
+
+    > img {
+      grid-row: 1 / -1;
+    }
+
+    @supports (display: grid) {
+      > * {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      > h1 {
+        font-size: $font-size-xxl;
+        line-height: $line-height-xxl;
+        text-align: left;
+      }
+    }
+  }
+}

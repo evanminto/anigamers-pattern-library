@@ -30,7 +30,11 @@
   }
 
   p {
-    margin: $space-sm-relative 0;
+    margin: 0;
+  }
+
+  * + p {
+    margin-top: $space-sm-relative;
   }
 
   img {
