@@ -4,7 +4,7 @@
   .summary {
     display: grid;
     grid-gap: $space-sm $space-md;
-    grid-template-columns: 10 * $vertical-rhythm 1fr;
+    grid-template-columns: 5 * $vertical-rhythm 1fr;
     grid-template-rows: auto 1fr;
 
     &__description {
@@ -26,6 +26,30 @@
         line-height: $line-height-xxl;
         text-align: left;
       }
+    }
+  }
+}
+
+@include medium-screen {
+  .podcast-details {
+    .summary {
+      grid-template-columns: 10 * $vertical-rhythm 1fr;
+    }
+  }
+}
+
+@include large-screen {
+  .podcast-details {
+    .summary {
+      grid-template-columns: 5 * $vertical-rhythm 1fr;
+    }
+  }
+}
+
+@include x-large-screen {
+  .podcast-details {
+    .summary {
+      grid-template-columns: 10 * $vertical-rhythm 1fr;
     }
   }
 }
